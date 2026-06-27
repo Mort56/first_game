@@ -1,0 +1,899 @@
+fileFormatVersion: 2
+guid: ebe6d0637977c8f4aaa71cd500fd83e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4877602555638783468
+    second: Character0_Fish_Fishingpole2_0
+  - first:
+      213: 4995120199530462982
+    second: Character0_Fish_Fishingpole2_1
+  - first:
+      213: -8242761999989431214
+    second: Character0_Fish_Fishingpole2_2
+  - first:
+      213: -8168994948427448845
+    second: Character0_Fish_Fishingpole2_3
+  - first:
+      213: 8169742898063500841
+    second: Character0_Fish_Fishingpole2_4
+  - first:
+      213: 3240763979137365076
+    second: Character0_Fish_Fishingpole2_5
+  - first:
+      213: -7141611614034256832
+    second: Character0_Fish_Fishingpole2_6
+  - first:
+      213: 4604567657459465061
+    second: Character0_Fish_Fishingpole2_7
+  - first:
+      213: -8230602155720592540
+    second: Character0_Fish_Fishingpole2_8
+  - first:
+      213: 5504166102763880590
+    second: Character0_Fish_Fishingpole2_9
+  - first:
+      213: 3777270608181679835
+    second: Character0_Fish_Fishingpole2_10
+  - first:
+      213: -5484774637600232862
+    second: Character0_Fish_Fishingpole2_11
+  - first:
+      213: 3376386197204722532
+    second: Character0_Fish_Fishingpole2_12
+  - first:
+      213: 1512271781873204470
+    second: Character0_Fish_Fishingpole2_13
+  - first:
+      213: 8188271462380838424
+    second: Character0_Fish_Fishingpole2_14
+  - first:
+      213: 7884801865482130130
+    second: Character0_Fish_Fishingpole2_15
+  - first:
+      213: -3272369520273435057
+    second: Character0_Fish_Fishingpole2_16
+  - first:
+      213: 3959368369657837164
+    second: Character0_Fish_Fishingpole2_17
+  - first:
+      213: -4374652870970609991
+    second: Character0_Fish_Fishingpole2_18
+  - first:
+      213: 1388469669837542676
+    second: Character0_Fish_Fishingpole2_19
+  - first:
+      213: -357785683489492212
+    second: Character0_Fish_Fishingpole2_20
+  - first:
+      213: 7644909067361998794
+    second: Character0_Fish_Fishingpole2_21
+  - first:
+      213: 288485541755508065
+    second: Character0_Fish_Fishingpole2_22
+  - first:
+      213: -5870522376243242588
+    second: Character0_Fish_Fishingpole2_23
+  - first:
+      213: -5547306604718565701
+    second: Character0_Fish_Fishingpole2_24
+  - first:
+      213: 5459201334764713845
+    second: Character0_Fish_Fishingpole2_25
+  - first:
+      213: -8419120761451562980
+    second: Character0_Fish_Fishingpole2_26
+  - first:
+      213: 2759175422569701331
+    second: Character0_Fish_Fishingpole2_27
+  - first:
+      213: 8515519256904175482
+    second: Character0_Fish_Fishingpole2_28
+  - first:
+      213: -1543334268478743000
+    second: Character0_Fish_Fishingpole2_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1840
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced13648ea9b0b340800000000000000
+      internalID: 4877602555638783468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_1
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1840
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60f346f2b5b325540800000000000000
+      internalID: 4995120199530462982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_2
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1840
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 254aa8e02a3db9d80800000000000000
+      internalID: -8242761999989431214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_3
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1840
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fd75072066e1ae80800000000000000
+      internalID: -8168994948427448845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_4
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 1840
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 926685171e1c06170800000000000000
+      internalID: 8169742898063500841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_5
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 1840
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4543d513ba189fc20800000000000000
+      internalID: 3240763979137365076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1380
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04c1fad2316e3ec90800000000000000
+      internalID: -7141611614034256832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_7
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1380
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56bbf1f63e5b6ef30800000000000000
+      internalID: 4604567657459465061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_8
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1380
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463b5bc62f607cd80800000000000000
+      internalID: -8230602155720592540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_9
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1380
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80ccfb78e9b26c40800000000000000
+      internalID: 5504166102763880590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_10
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 1380
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd65135fa9f8b6430800000000000000
+      internalID: 3777270608181679835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_11
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 1380
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26a24c4d68a22e3b0800000000000000
+      internalID: -5484774637600232862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 920
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4636be48b555bde20800000000000000
+      internalID: 3376386197204722532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_13
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 920
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fc366a5c2bacf410800000000000000
+      internalID: 1512271781873204470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_14
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 920
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e9daff28592a170800000000000000
+      internalID: 8188271462380838424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_15
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 920
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d2566c65817c6d60800000000000000
+      internalID: 7884801865482130130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_16
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 920
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f46594252453692d0800000000000000
+      internalID: -3272369520273435057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_17
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 920
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c667f58fd8082f630800000000000000
+      internalID: 3959368369657837164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 460
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9be672a446c1a43c0800000000000000
+      internalID: -4374652870970609991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_19
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 460
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 415121ceec5d44310800000000000000
+      internalID: 1388469669837542676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_20
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 460
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0373e501d3e80bf0800000000000000
+      internalID: -357785683489492212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_21
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 460
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac75644da4c281a60800000000000000
+      internalID: 7644909067361998794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_22
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 460
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1655c2f5218e00400800000000000000
+      internalID: 288485541755508065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_23
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 460
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a91a0e8007b78ea0800000000000000
+      internalID: -5870522376243242588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb6529da8020403b0800000000000000
+      internalID: -5547306604718565701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_25
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 0
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5773dfb90baf2cb40800000000000000
+      internalID: 5459201334764713845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_26
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 0
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c18309c1646492b80800000000000000
+      internalID: -8419120761451562980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_27
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 0
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3df51479d6f8a4620800000000000000
+      internalID: 2759175422569701331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_28
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 0
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7f85c1a5a33d2670800000000000000
+      internalID: 8515519256904175482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character0_Fish_Fishingpole2_29
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 0
+        width: 460
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e13a5e8a9f49ae0800000000000000
+      internalID: -1543334268478743000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2b2debd4f14c6cc42b02ce9360cceb35
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":5.0},"gridSpriteSize":{"x":460.0,"y":460.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Character0_Fish_Fishingpole2_0: 4877602555638783468
+      Character0_Fish_Fishingpole2_1: 4995120199530462982
+      Character0_Fish_Fishingpole2_10: 3777270608181679835
+      Character0_Fish_Fishingpole2_11: -5484774637600232862
+      Character0_Fish_Fishingpole2_12: 3376386197204722532
+      Character0_Fish_Fishingpole2_13: 1512271781873204470
+      Character0_Fish_Fishingpole2_14: 8188271462380838424
+      Character0_Fish_Fishingpole2_15: 7884801865482130130
+      Character0_Fish_Fishingpole2_16: -3272369520273435057
+      Character0_Fish_Fishingpole2_17: 3959368369657837164
+      Character0_Fish_Fishingpole2_18: -4374652870970609991
+      Character0_Fish_Fishingpole2_19: 1388469669837542676
+      Character0_Fish_Fishingpole2_2: -8242761999989431214
+      Character0_Fish_Fishingpole2_20: -357785683489492212
+      Character0_Fish_Fishingpole2_21: 7644909067361998794
+      Character0_Fish_Fishingpole2_22: 288485541755508065
+      Character0_Fish_Fishingpole2_23: -5870522376243242588
+      Character0_Fish_Fishingpole2_24: -5547306604718565701
+      Character0_Fish_Fishingpole2_25: 5459201334764713845
+      Character0_Fish_Fishingpole2_26: -8419120761451562980
+      Character0_Fish_Fishingpole2_27: 2759175422569701331
+      Character0_Fish_Fishingpole2_28: 8515519256904175482
+      Character0_Fish_Fishingpole2_29: -1543334268478743000
+      Character0_Fish_Fishingpole2_3: -8168994948427448845
+      Character0_Fish_Fishingpole2_4: 8169742898063500841
+      Character0_Fish_Fishingpole2_5: 3240763979137365076
+      Character0_Fish_Fishingpole2_6: -7141611614034256832
+      Character0_Fish_Fishingpole2_7: 4604567657459465061
+      Character0_Fish_Fishingpole2_8: -8230602155720592540
+      Character0_Fish_Fishingpole2_9: 5504166102763880590
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

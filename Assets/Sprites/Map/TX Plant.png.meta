@@ -1,0 +1,1016 @@
+fileFormatVersion: 2
+guid: 79e3176bb37a33f4cadbe2a3661da9be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7393824619407222304
+    second: TX Plant_0
+  - first:
+      213: -4181601160242843456
+    second: TX Plant_1
+  - first:
+      213: 6212027134239493093
+    second: TX Plant_2
+  - first:
+      213: 8387603877276295833
+    second: TX Plant_3
+  - first:
+      213: 8229732441688533532
+    second: TX Plant_4
+  - first:
+      213: 3793301123250259786
+    second: TX Plant_5
+  - first:
+      213: 1149584892168664425
+    second: TX Plant_6
+  - first:
+      213: 7718867192508710523
+    second: TX Plant_7
+  - first:
+      213: 8743813339972885927
+    second: TX Plant_8
+  - first:
+      213: -4067435459396679998
+    second: TX Plant_9
+  - first:
+      213: 6355068571657321531
+    second: TX Plant_10
+  - first:
+      213: 8308598747488745580
+    second: TX Plant_11
+  - first:
+      213: 5474419559731158034
+    second: TX Plant_12
+  - first:
+      213: -813630121160539150
+    second: TX Plant_13
+  - first:
+      213: 3084262300659187285
+    second: TX Plant_14
+  - first:
+      213: 4887785052923593483
+    second: TX Plant_15
+  - first:
+      213: -669106929187006681
+    second: TX Plant_16
+  - first:
+      213: 1588864095992348336
+    second: TX Plant_17
+  - first:
+      213: 285865371628332569
+    second: TX Plant_18
+  - first:
+      213: -5677458682547464731
+    second: TX Plant_19
+  - first:
+      213: -5840665122637402067
+    second: TX Plant_20
+  - first:
+      213: -5343987475862678200
+    second: TX Plant_21
+  - first:
+      213: -618045075276401279
+    second: TX Plant_22
+  - first:
+      213: 2652889518907116015
+    second: TX Plant_23
+  - first:
+      213: 3187836368505657787
+    second: TX Plant_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TX Plant_85
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 352
+        width: 128
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07851049}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fb5a80bc698fc40bb9f583406e8bd4
+      internalID: -197083838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_125
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 352
+        width: 128
+        height: 144
+      alignment: 9
+      pivot: {x: 0.49484587, y: 0.071014196}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 193818d38ca94d44a836cae11d6c1193
+      internalID: 1667374350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_127
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 352
+        width: 128
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.087926015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1598a0161a572fe4fad95bf1319a6576
+      internalID: -1277365036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_159
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 288
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.51070344, y: 0.27828503}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8cc67a28602fb4aa79fe5c4cef4bde
+      internalID: 1441504644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_161
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.49048305, y: 0.21889305}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9275a76227771e42ae0bd86d44d20cd
+      internalID: 1591453268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_163
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 288
+        width: 64
+        height: 48
+      alignment: 9
+      pivot: {x: 0.49524117, y: 0.1332391}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8d3d2b1a8461542b782594fa64ab25
+      internalID: -1526041231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_178
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 272
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.49524117, y: 0.2474451}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25bae150f3f4024890cc70fbf654bd5
+      internalID: -1276664012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_180
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 272
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.49524164, y: 0.20937681}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76174becd0cd0284f91ccc0c54daa87a
+      internalID: 584201704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_182
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 272
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.47620726, y: 0.2855134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eafb55e1552dc9949a1f3e0c780c4ef0
+      internalID: 161353905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_191
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5195201, y: 0.4294412}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2d41d8a1a37ec46996351926bf133d
+      internalID: -1953538079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_193
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.51301324, y: 0.39690733}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2daffa08a2317ed44b483eeaeb7a13e2
+      internalID: -481021670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_195
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.49349308, y: 0.403414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59cd88e4764aa914d932163633178b07
+      internalID: -723475788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_197
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.42842674, y: 0.3513608}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69fa6b4b7065f2f4c97f65b8c3c4e7e2
+      internalID: 185196985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_207
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5065067, y: 0.4099207}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf4a20c71b1f20e449f321864dfa3af1
+      internalID: 1565087165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_209
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.51952016, y: 0.42293382}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a3cb5215b0fa764cbc59aa69b4ebf91
+      internalID: 1501251402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_211
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.51301336, y: 0.40341353}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a2d92b4e37cd342b8349e8033041db
+      internalID: -1301122241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_213
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.48048043, y: 0.42944002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba82aaf41979a04e81ca7896dfe3749
+      internalID: -1664641284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_223
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.48047984, y: 0.4294411}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b11403f87ed0564a8282ffd2a138865
+      internalID: -1584610287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_225
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.47397327, y: 0.40991986}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6595f7b2b7f5c4a80d673f27bb42f8
+      internalID: -1044604918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_227
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.454453, y: 0.37088037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de29b68f3fb40043a1682f23d7bd92e
+      internalID: -1146577089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_229
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.49349356, y: 0.37088037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333ed91cf23180d42bb49bccc42270eb
+      internalID: 908997166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_238
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.37088045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd633a97cdc8346448b51e412dbcef12
+      internalID: 902760694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_240
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5260267, y: 0.36437437}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e72f5000dabeeb4ba13cbc77e5a13a7
+      internalID: -1536466380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_242
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5065067, y: 0.37738752}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21dfe1f1df8a91f4c8c94494d39a266f
+      internalID: -1529226682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_244
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.53253365, y: 0.4424534}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68efe6af7aafe3447b04b9e5b854394e
+      internalID: 654081393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 051f43d83515e8d4fb369806bb0bc2e4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      TX Plant_0: 7393824619407222304
+      TX Plant_1: -4181601160242843456
+      TX Plant_10: 6355068571657321531
+      TX Plant_100: 99825296
+      TX Plant_101: 1190311565
+      TX Plant_102: -702777519
+      TX Plant_103: 127451840
+      TX Plant_104: 1700734100
+      TX Plant_105: 794246622
+      TX Plant_106: -1720922713
+      TX Plant_107: -766697860
+      TX Plant_108: 305001535
+      TX Plant_109: 1921044711
+      TX Plant_11: 8308598747488745580
+      TX Plant_110: 745598223
+      TX Plant_111: 1064728604
+      TX Plant_112: 81536111
+      TX Plant_113: 1977074614
+      TX Plant_114: -473741127
+      TX Plant_115: 1871094485
+      TX Plant_116: -392231288
+      TX Plant_117: -1696730154
+      TX Plant_118: 1358947465
+      TX Plant_119: 2044911718
+      TX Plant_12: 5474419559731158034
+      TX Plant_120: 1756776708
+      TX Plant_121: -522600603
+      TX Plant_122: 1852883893
+      TX Plant_123: -1203921811
+      TX Plant_124: -2042814773
+      TX Plant_125: 1667374350
+      TX Plant_126: -1454453339
+      TX Plant_127: -1277365036
+      TX Plant_128: 210639930
+      TX Plant_129: 2071760359
+      TX Plant_13: -813630121160539150
+      TX Plant_130: -91575934
+      TX Plant_131: 1607893534
+      TX Plant_132: -524758274
+      TX Plant_133: 1768384712
+      TX Plant_134: -1991597434
+      TX Plant_135: 620459631
+      TX Plant_136: 1619184028
+      TX Plant_137: -90335803
+      TX Plant_138: -947246108
+      TX Plant_139: -1387731772
+      TX Plant_14: 3084262300659187285
+      TX Plant_140: 714010765
+      TX Plant_141: 1245421702
+      TX Plant_142: -1375232535
+      TX Plant_143: 729035623
+      TX Plant_144: -1807535989
+      TX Plant_145: -928164737
+      TX Plant_146: -1347673902
+      TX Plant_147: 678018988
+      TX Plant_148: 1886143449
+      TX Plant_149: 554900730
+      TX Plant_15: 4887785052923593483
+      TX Plant_150: -629089944
+      TX Plant_151: 155134324
+      TX Plant_152: 2001402322
+      TX Plant_153: -1571718136
+      TX Plant_154: 879376206
+      TX Plant_155: 1498732257
+      TX Plant_156: -678548797
+      TX Plant_157: 2140511802
+      TX Plant_158: -1380079973
+      TX Plant_159: 1441504644
+      TX Plant_16: -669106929187006681
+      TX Plant_160: 1145092115
+      TX Plant_161: 1591453268
+      TX Plant_162: 1909733241
+      TX Plant_163: -1526041231
+      TX Plant_164: 151599768
+      TX Plant_165: -2022864893
+      TX Plant_166: -939019989
+      TX Plant_167: -1616907301
+      TX Plant_168: 2077337880
+      TX Plant_169: -1519223970
+      TX Plant_17: 1588864095992348336
+      TX Plant_170: 380313249
+      TX Plant_171: -1242101566
+      TX Plant_172: 2116830497
+      TX Plant_173: 1960157211
+      TX Plant_174: 1173920336
+      TX Plant_175: -1880572509
+      TX Plant_176: 115288643
+      TX Plant_177: -934749809
+      TX Plant_178: -1276664012
+      TX Plant_179: 581794262
+      TX Plant_18: 285865371628332569
+      TX Plant_180: 584201704
+      TX Plant_181: 734932484
+      TX Plant_182: 161353905
+      TX Plant_183: -1852822493
+      TX Plant_184: -1706164392
+      TX Plant_185: 763724135
+      TX Plant_186: 1902231091
+      TX Plant_187: -733519445
+      TX Plant_188: -1733563660
+      TX Plant_189: 1710034220
+      TX Plant_19: -5677458682547464731
+      TX Plant_190: 1514100366
+      TX Plant_191: -1953538079
+      TX Plant_192: 737450484
+      TX Plant_193: -481021670
+      TX Plant_194: -1115992534
+      TX Plant_195: -723475788
+      TX Plant_196: 446293328
+      TX Plant_197: 185196985
+      TX Plant_198: 1055952337
+      TX Plant_199: 497807423
+      TX Plant_2: 6212027134239493093
+      TX Plant_20: -5840665122637402067
+      TX Plant_200: -1248186526
+      TX Plant_201: -1056911081
+      TX Plant_202: 1031657960
+      TX Plant_203: -385085018
+      TX Plant_204: 1210608629
+      TX Plant_205: 1408338210
+      TX Plant_206: 38978034
+      TX Plant_207: 1565087165
+      TX Plant_208: 611189206
+      TX Plant_209: 1501251402
+      TX Plant_21: -5343987475862678200
+      TX Plant_210: 340624145
+      TX Plant_211: -1301122241
+      TX Plant_212: 172822718
+      TX Plant_213: -1664641284
+      TX Plant_214: 1110698593
+      TX Plant_215: -820049603
+      TX Plant_216: -16376708
+      TX Plant_217: 595935905
+      TX Plant_218: -1977398896
+      TX Plant_219: 887495939
+      TX Plant_22: -618045075276401279
+      TX Plant_220: -2071944647
+      TX Plant_221: -1292820193
+      TX Plant_222: -588305484
+      TX Plant_223: -1584610287
+      TX Plant_224: 368091755
+      TX Plant_225: -1044604918
+      TX Plant_226: 1501059184
+      TX Plant_227: -1146577089
+      TX Plant_228: 1517197000
+      TX Plant_229: 908997166
+      TX Plant_23: 2652889518907116015
+      TX Plant_230: -494604262
+      TX Plant_231: -1400930085
+      TX Plant_232: -541253538
+      TX Plant_233: 1815514838
+      TX Plant_234: 1077537308
+      TX Plant_235: 1255333243
+      TX Plant_236: -563221400
+      TX Plant_237: 2045513439
+      TX Plant_238: 902760694
+      TX Plant_239: 826842054
+      TX Plant_24: 3187836368505657787
+      TX Plant_240: -1536466380
+      TX Plant_241: -1879236065
+      TX Plant_242: -1529226682
+      TX Plant_243: 1748430649
+      TX Plant_244: 654081393
+      TX Plant_245: -1434887656
+      TX Plant_25: -68516264
+      TX Plant_26: 595033341
+      TX Plant_27: 772628104
+      TX Plant_28: -370452278
+      TX Plant_29: -891947188
+      TX Plant_3: 8387603877276295833
+      TX Plant_30: 49913630
+      TX Plant_31: -609216791
+      TX Plant_32: -1040363476
+      TX Plant_33: -26529731
+      TX Plant_34: 551147780
+      TX Plant_35: -850174907
+      TX Plant_36: 1702682696
+      TX Plant_37: 1061700177
+      TX Plant_38: 1359978357
+      TX Plant_39: 283570916
+      TX Plant_4: 8229732441688533532
+      TX Plant_40: 1175977119
+      TX Plant_41: -23034450
+      TX Plant_42: -1803221047
+      TX Plant_43: 1523799653
+      TX Plant_44: -577950383
+      TX Plant_45: -1235973745
+      TX Plant_46: 1913261570
+      TX Plant_47: 300665814
+      TX Plant_48: -74358718
+      TX Plant_49: 1562267333
+      TX Plant_5: 3793301123250259786
+      TX Plant_50: -819080599
+      TX Plant_51: -1014100820
+      TX Plant_52: -1813966275
+      TX Plant_53: -1870356789
+      TX Plant_54: 2073687053
+      TX Plant_55: -1785652877
+      TX Plant_56: 910960192
+      TX Plant_57: -2113625006
+      TX Plant_58: 1345616766
+      TX Plant_59: 352257328
+      TX Plant_6: 1149584892168664425
+      TX Plant_60: -81628419
+      TX Plant_61: -782240689
+      TX Plant_62: -1724008801
+      TX Plant_63: 1533376955
+      TX Plant_64: 1441258094
+      TX Plant_65: 2087077148
+      TX Plant_66: 1232821622
+      TX Plant_67: 1676125552
+      TX Plant_68: -517776207
+      TX Plant_69: -212647347
+      TX Plant_7: 7718867192508710523
+      TX Plant_70: 1902019317
+      TX Plant_71: 816342595
+      TX Plant_72: -916407080
+      TX Plant_73: 35611331
+      TX Plant_74: -626228701
+      TX Plant_75: -876151636
+      TX Plant_76: -1776614835
+      TX Plant_77: -1439762273
+      TX Plant_78: 1741476120
+      TX Plant_79: 1194754969
+      TX Plant_8: 8743813339972885927
+      TX Plant_80: -556471316
+      TX Plant_81: -699353450
+      TX Plant_82: -443359979
+      TX Plant_83: 630540528
+      TX Plant_84: -1810096870
+      TX Plant_85: -197083838
+      TX Plant_86: 1711392314
+      TX Plant_87: -2071621773
+      TX Plant_88: -61568644
+      TX Plant_89: 306590190
+      TX Plant_9: -4067435459396679998
+      TX Plant_90: 1170593498
+      TX Plant_91: 1562294410
+      TX Plant_92: 1157262754
+      TX Plant_93: -1189634154
+      TX Plant_94: 1739187594
+      TX Plant_95: -1772278804
+      TX Plant_96: -1226474872
+      TX Plant_97: 913859849
+      TX Plant_98: 1783992720
+      TX Plant_99: 1299169123
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
