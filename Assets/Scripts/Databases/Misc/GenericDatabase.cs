@@ -1,44 +1,46 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEditor;
 
 public class GenericDatabase<T> : Database where T : new()
 {
-    
-    [SerializeField] private List<T> Items;
+
+    [SerializeField] protected List<T> items;
     [SerializeField] private T currentItem;
-    private int _currentId;
+    [SerializeField] private int _currentId;
+
 
     public override void Create()
     {
-        if (Items == null)
-            Items = new List<T>();
+        if (items == null)
+            items = new List<T>();
 
         T item = new T();
-        Items.Add(item);
-        _currentId = Items.Count - 1;
-        currentItem = Items[_currentId];
+        items.Add(item);
+        _currentId = items.Count - 1;
+        currentItem = items[_currentId];
     }
 
     public override void Delete()
     {
-        if (Items == null || currentItem == null)
+        if (items == null || currentItem == null)
             return;
 
-        Items.Remove(currentItem);
+        items.Remove(currentItem);
         _currentId = 0;
 
-        if (Items.Count == 0)
+        if (items.Count == 0)
             Create();
         else
-            currentItem = Items[_currentId];
+            currentItem = items[_currentId];
     }
 
     public override void Next()
     {
-        if (_currentId + 1 < Items.Count)
+        if (_currentId + 1 < items.Count)
         {
             _currentId += 1;
-            currentItem = Items[_currentId];
+            currentItem = items[_currentId];
         }
     }
 
@@ -47,7 +49,7 @@ public class GenericDatabase<T> : Database where T : new()
         if (_currentId - 1 >= 0)
         {
             _currentId -= 1;
-            currentItem = Items[_currentId];
+            currentItem = items[_currentId];
         }
     }
 }

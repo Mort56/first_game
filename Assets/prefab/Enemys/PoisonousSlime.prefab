@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8683546724076327747}
   - component: {fileID: 4825980897615780031}
   - component: {fileID: 6181852550395226155}
+  - component: {fileID: 1505124684857335862}
+  - component: {fileID: 1532643680583916168}
   m_Layer: 0
   m_Name: PoisonousSlime
   m_TagString: Enemy
@@ -81,7 +83,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1724872090685538976, guid: f8d259a958d9a094fbcd994217c06f02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -137,3 +139,31 @@ NavMeshAgent:
   m_BaseOffset: 0.3
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1505124684857335862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3757364045514339658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05cb863e83fb06b42ac409bd048bbcf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  navMesh: {fileID: 6181852550395226155}
+  enemyController: {fileID: 1532643680583916168}
+--- !u!114 &1532643680583916168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3757364045514339658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b1954474a0c3b42ba13ea49f002d4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  enemyDatabase: {fileID: 11400000, guid: eaf0e741484823d46a6ae7e89ac3af95, type: 2}
+  id: 1

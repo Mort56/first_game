@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &220975287 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3647420932246495678, guid: b0a98462b2e7203488e33bb5a4afdb88, type: 3}
+  m_PrefabInstance: {fileID: 768411941}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85145444ad21849498b73eccad6f34f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
 --- !u!1 &414520027
 GameObject:
   m_ObjectHideFlags: 0
@@ -30750,10 +30761,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1532643680583916168, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
-      propertyPath: id
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3757364045514339658, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
       propertyPath: m_Name
       value: PoisonousSlime
@@ -30798,11 +30805,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8683546724076327747, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3757364045514339658, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2147441096}
   m_SourcePrefab: {fileID: 100100000, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
+--- !u!1 &2147441094 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3757364045514339658, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
+  m_PrefabInstance: {fileID: 2147441093}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &2147441095 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 6181852550395226155, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
+  m_PrefabInstance: {fileID: 2147441093}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2147441096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147441094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05cb863e83fb06b42ac409bd048bbcf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  navMesh: {fileID: 2147441095}
+  player: {fileID: 220975287}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

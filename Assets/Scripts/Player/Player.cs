@@ -18,6 +18,12 @@ public class Player : MonoBehaviour
     private Vector2 _movement;
     private float _speed;
     public Vector2 LastDirection => _lastDirection;
+    public static Player Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Update()
     {

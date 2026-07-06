@@ -15,7 +15,10 @@ public class DatabaseEditor : Editor
         GUILayout.BeginHorizontal();
 
         if (GUILayout.Button("<="))
+        {
             _itemBase.Prev();
+            EditorUtility.SetDirty(_itemBase);
+        }
 
         if (GUILayout.Button("Create"))
         {
@@ -30,7 +33,10 @@ public class DatabaseEditor : Editor
         }
 
         if (GUILayout.Button("=>"))
+        {
             _itemBase.Next();
+            EditorUtility.SetDirty(_itemBase);
+        }
 
         GUILayout.EndHorizontal();
         base.OnInspectorGUI();
