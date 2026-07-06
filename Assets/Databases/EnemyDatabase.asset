@@ -17,19 +17,25 @@ MonoBehaviour:
     maxHealth: 100
     damage: 10
     speed: 1
-    icon: {fileID: 0}
+    attackDistanceByX: 1.5
+    attackDistanceByY: 0.5
+    cooldawn: 1
     enemyType: 0
   - id: 1
     maxHealth: 100
     damage: 25
     speed: 0.8
-    icon: {fileID: 0}
+    attackDistanceByX: 0
+    attackDistanceByY: 0
+    cooldawn: 0
     enemyType: 0
   currentItem:
-    id: 1
+    id: 0
     maxHealth: 100
-    damage: 25
-    speed: 0.8
-    icon: {fileID: 0}
+    damage: 10
+    speed: 1
+    attackDistanceByX: 1.5
+    attackDistanceByY: 0.5
+    cooldawn: 1
     enemyType: 0
-  _currentId: 1
+  _currentId: 0

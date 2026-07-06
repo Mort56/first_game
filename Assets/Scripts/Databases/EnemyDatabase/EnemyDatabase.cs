@@ -25,9 +25,14 @@ public class Enemy
     [SerializeField] private float speed;
     public float Speed => speed;
 
+    [SerializeField] private float attackDistanceByX;
+    public float AttackDistanceByX => attackDistanceByX;
 
-    [SerializeField] private Sprite icon;
-    public Sprite Icon => icon;
+    [SerializeField] private float attackDistanceByY;
+    public float AttackDistanceByY => attackDistanceByY;
+
+    [SerializeField] private float cooldawn;
+    public float Cooldawn => cooldawn;
 
     [SerializeField] private EnemyModifier enemyType;
     public EnemyModifier EnemeyType => enemyType;
