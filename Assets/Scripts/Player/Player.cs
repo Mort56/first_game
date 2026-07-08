@@ -13,10 +13,13 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private WeaponController activeWeapon;
+    [SerializeField] private Health health;
     private bool _isCanMove = false;
     private Vector2 _lastDirection;
     private Vector2 _movement;
     private float _speed;
+
+    public Health PlayerHealth => health;
     public Vector2 LastDirection => _lastDirection;
     public static Player Instance;
 

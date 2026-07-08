@@ -11,11 +11,11 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer;
     private EnemyState _state;
     private float _speed;
-    private float _damage;
     private float _minimumXDistanceForAttack;
     private float _minimumYDistanceForAttack;
     private float _cooldawn;
     private bool _attackReset = false;
+    private bool _isAttacking = false;
 
     private void Awake()
     {
@@ -23,10 +23,10 @@ public class EnemyMovement : MonoBehaviour
         navMesh.updateUpAxis = false;
         _state = EnemyState.chase;
         _speed = enemyController.Data.Speed;
-        _damage = enemyController.Data.Damage;
         _minimumXDistanceForAttack = enemyController.Data.AttackDistanceByX;
         _minimumYDistanceForAttack = enemyController.Data.AttackDistanceByY;
         _cooldawn = enemyController.Data.Cooldawn;
+        navMesh.speed = _speed;
     }
 
     private void FixedUpdate()
@@ -36,7 +36,8 @@ public class EnemyMovement : MonoBehaviour
         else
             _state = EnemyState.chase;
         Movement();
-            
+        if (Mathf.Abs(navMesh.velocity.x) > 0.1f)
+            spriteRenderer.flipX = navMesh.velocity.x < 0;
     }
 
     private void Movement()
@@ -47,7 +48,8 @@ public class EnemyMovement : MonoBehaviour
                 navMesh.SetDestination(Player.Instance.transform.position);
                 break;
             case EnemyState.attack:
-                StartCoroutine(AttackCoroutine());
+                if (!_isAttacking)
+                    StartCoroutine(AttackCoroutine());
                 break;
         }
     }
@@ -64,6 +66,7 @@ public class EnemyMovement : MonoBehaviour
     private IEnumerator AttackCoroutine()
     {
         var attackTime = _cooldawn;
+        _isAttacking = true;
         animator.SetBool(IS_ATTACKED, IsCanAttack());
         while (attackTime > 0f)
         {
@@ -74,6 +77,8 @@ public class EnemyMovement : MonoBehaviour
             yield return null;
         }
         animator.SetBool(IS_ATTACKED, _attackReset);
+        _isAttacking = false;
+        navMesh.isStopped = false;
     }
 }
 

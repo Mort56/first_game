@@ -16,7 +16,7 @@ public class HealthBar : MonoBehaviour
 
     private void OnEnable()
     {
-        targetHealth.onTakeHit += TargetHealth_onTakeHit;
+        targetHealth.onHealthChanges += TargetHealth_onTakeHit;
     }
 
     private void Start()
@@ -26,7 +26,7 @@ public class HealthBar : MonoBehaviour
 
     private void OnDisable()
     {
-        targetHealth.onTakeHit -= TargetHealth_onTakeHit;
+        targetHealth.onHealthChanges -= TargetHealth_onTakeHit;
     }
 
     private void TargetHealth_onTakeHit(object sender, System.EventArgs e)

@@ -6,7 +6,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float maxHealth;
     private float currentHealth;
 
-    public event EventHandler onTakeHit;
+    public event EventHandler onHealthChanges;
 
     private void Awake()
     {
@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth < 0)
             currentHealth = 0;
-        onTakeHit?.Invoke(this, EventArgs.Empty);
+        onHealthChanges?.Invoke(this, EventArgs.Empty);
     }
 
     public void TakeHealth(float value)
@@ -26,7 +26,7 @@ public class Health : MonoBehaviour
         currentHealth += value;
         if (currentHealth > maxHealth)
             currentHealth = maxHealth;
-        onTakeHit?.Invoke(this, EventArgs.Empty);
+        onHealthChanges?.Invoke(this, EventArgs.Empty);
     }
 
     

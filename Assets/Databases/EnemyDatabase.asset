@@ -16,10 +16,10 @@ MonoBehaviour:
   - id: 0
     maxHealth: 100
     damage: 10
-    speed: 1
+    speed: 3.2
     attackDistanceByX: 1.5
     attackDistanceByY: 0.5
-    cooldawn: 1
+    cooldawn: 0.5
     enemyType: 0
   - id: 1
     maxHealth: 100
