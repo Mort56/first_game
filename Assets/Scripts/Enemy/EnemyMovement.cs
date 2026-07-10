@@ -17,7 +17,7 @@ public class EnemyMovement : MonoBehaviour
     private bool _attackReset = false;
     private bool _isAttacking = false;
 
-    private void Awake()
+    private void Start()
     {
         navMesh.updateRotation = false;
         navMesh.updateUpAxis = false;

@@ -30437,6 +30437,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &657825188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2244445103889660810, guid: b0a98462b2e7203488e33bb5a4afdb88, type: 3}
+  m_PrefabInstance: {fileID: 768411941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &750123156
 GameObject:
   m_ObjectHideFlags: 0
@@ -30688,7 +30693,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2244445103889660810, guid: b0a98462b2e7203488e33bb5a4afdb88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2098359283}
   m_SourcePrefab: {fileID: 100100000, guid: b0a98462b2e7203488e33bb5a4afdb88, type: 3}
 --- !u!1 &811125326
 GameObject:
@@ -30746,17 +30754,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4900bcdd2f1f484469ae135d1601f9e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameSettings
+--- !u!212 &1829870193 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4205168836814778722, guid: b0a98462b2e7203488e33bb5a4afdb88, type: 3}
+  m_PrefabInstance: {fileID: 768411941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2098359278 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6992081120209022659, guid: b0a98462b2e7203488e33bb5a4afdb88, type: 3}
   m_PrefabInstance: {fileID: 768411941}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 657825188}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea90dc97e392e4840a35d555601fc62d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
+--- !u!114 &2098359283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657825188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117b1bb27c7c46842b2ce82347f8171a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Blink
+  spriteRenderer: {fileID: 1829870193}
+  blinkMaterial: {fileID: 2100000, guid: 817de635fb6c1f94aa1ccd075c738436, type: 2}
+  health: {fileID: 2098359278}
 --- !u!1001 &2147441093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30815,6 +30843,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5378686934301107733, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
       propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378686934301107733, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
+      value: 0.037740435
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378686934301107733, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
+      value: 0.8651506
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378686934301107733, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
+      value: -0.9311577
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378686934301107733, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
+      value: 0.31597862
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378686934301107733, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
+      value: -0.45351243
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378686934301107733, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
+      value: -0.08282929
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378686934301107733, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: 0.49754223
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378686934301107733, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: -0.09266365
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378686934301107733, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
+      value: 0.95663714
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378686934301107733, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
+      value: 0.3192082
+      objectReference: {fileID: 0}
+    - target: {fileID: 8683546724076327747, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
+      propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
     private float currentHealth;
 
     public event EventHandler onHealthChanges;
+    public event EventHandler onTakeHit;
 
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class Health : MonoBehaviour
         if (currentHealth < 0)
             currentHealth = 0;
         onHealthChanges?.Invoke(this, EventArgs.Empty);
+        onTakeHit?.Invoke(this, EventArgs.Empty);
     }
 
     public void TakeHealth(float value)

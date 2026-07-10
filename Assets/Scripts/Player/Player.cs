@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
@@ -19,8 +20,8 @@ public class Player : MonoBehaviour
     private Vector2 _movement;
     private float _speed;
 
-    public Health PlayerHealth => health;
     public Vector2 LastDirection => _lastDirection;
+    public Health PlayerHealth => health;
     public static Player Instance;
 
     private void Awake()

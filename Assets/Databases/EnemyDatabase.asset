@@ -17,7 +17,7 @@ MonoBehaviour:
     maxHealth: 100
     damage: 10
     speed: 3.2
-    attackDistanceByX: 1.5
+    attackDistanceByX: 1
     attackDistanceByY: 0.5
     cooldawn: 0.5
     enemyType: 0
@@ -33,9 +33,9 @@ MonoBehaviour:
     id: 0
     maxHealth: 100
     damage: 10
-    speed: 1
-    attackDistanceByX: 1.5
+    speed: 3.2
+    attackDistanceByX: 1
     attackDistanceByY: 0.5
-    cooldawn: 1
+    cooldawn: 0.5
     enemyType: 0
   _currentId: 0
