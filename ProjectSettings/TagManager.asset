@@ -6,8 +6,8 @@ TagManager:
   tags:
   - Level 3
   - Level 2
-  - Weapon
   - Enemy
+  - Weapon
   layers:
   - Default
   - TransparentFX

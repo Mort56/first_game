@@ -4,9 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class Button : MonoBehaviour
 {
+    private string _startGameScene = "StartGame";
     public void onClickStart()
     {
-        SceneManager.LoadScene("StartGame");
+        SceneManager.LoadScene(_startGameScene);
         Time.timeScale = 1.0f;
     }
 

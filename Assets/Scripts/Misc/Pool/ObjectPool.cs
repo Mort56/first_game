@@ -26,8 +26,9 @@ public class ObjectPool<T> where T : MonoBehaviour
     {
         _pool = new List<T>();
         for (int i = 0; i < count; i++)
-            CreateObject();
+            CreateObject(false);
     }
+
 
     private T CreateObject(bool isActiveByDefault = false)
     {
@@ -36,6 +37,7 @@ public class ObjectPool<T> where T : MonoBehaviour
         _pool.Add(createObject);
         return createObject;
     }
+
 
     public bool TryGetFreeElement(out T element)
     {

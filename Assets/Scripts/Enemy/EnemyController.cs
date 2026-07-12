@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] private EnemyDatabase enemyDatabase;
+    [SerializeField] private Health health;
     [SerializeField] private int id;
     public Enemy Data { get; private set; }
 
@@ -16,5 +17,10 @@ public class EnemyController : MonoBehaviour
     private void Awake()
     {
         Initialize(id);
+    }
+
+    private void Start()
+    {
+        health.ChangeMaxHealth(Data.MaxHealth);
     }
 }

@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 1505124684857335862}
   - component: {fileID: 1532643680583916168}
   - component: {fileID: 1596808526148467305}
+  - component: {fileID: 1500655930444396748}
+  - component: {fileID: 1133889184519436164}
   m_Layer: 0
   m_Name: PoisonousSlime
   m_TagString: Enemy
@@ -90,7 +92,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1724872090685538976, guid: f8d259a958d9a094fbcd994217c06f02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2, y: 2}
@@ -218,7 +220,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -234,11 +236,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.042779654, y: 0.91883165}
-      - {x: -1.0887947, y: 0.43090117}
-      - {x: -0.5877162, y: -0.10967046}
-      - {x: 0.5109645, y: -0.11950481}
-      - {x: 0.91883355, y: 0.48025313}
+    - - {x: 0.037740435, y: 0.8651506}
+      - {x: -0.9311577, y: 0.31597862}
+      - {x: -0.45351243, y: -0.08282929}
+      - {x: 0.49754223, y: -0.09266365}
+      - {x: 0.95663714, y: 0.3192082}
   m_UseDelaunayMesh: 1
 --- !u!114 &1505124684857335862
 MonoBehaviour:
@@ -269,6 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   enemyDatabase: {fileID: 11400000, guid: eaf0e741484823d46a6ae7e89ac3af95, type: 2}
+  health: {fileID: 1133889184519436164}
   id: 0
 --- !u!114 &1596808526148467305
 MonoBehaviour:
@@ -284,3 +287,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   enemyAttackCollider: {fileID: 5378686934301107733}
   enemyCollider: {fileID: 2268833950246927508}
+  enemyController: {fileID: 1532643680583916168}
+--- !u!114 &1500655930444396748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3757364045514339658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23db996ab7a237549a30611e2a00dd60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyGetDamage
+  health: {fileID: 1133889184519436164}
+--- !u!114 &1133889184519436164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3757364045514339658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea90dc97e392e4840a35d555601fc62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  maxHealth: 0

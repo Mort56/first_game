@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
-    private static readonly int IS_ATTACKED = Animator.StringToHash("isAttacked");
+    private static readonly int IsAttackedHash = Animator.StringToHash("isAttacked");
     [SerializeField] private NavMeshAgent navMesh;
     [SerializeField] EnemyController enemyController;
     [SerializeField] Animator animator;
@@ -67,7 +67,7 @@ public class EnemyMovement : MonoBehaviour
     {
         var attackTime = _cooldawn;
         _isAttacking = true;
-        animator.SetBool(IS_ATTACKED, IsCanAttack());
+        animator.SetBool(IsAttackedHash, IsCanAttack());
         while (attackTime > 0f)
         {
             navMesh.isStopped = true;
@@ -76,7 +76,7 @@ public class EnemyMovement : MonoBehaviour
             attackTime -= Time.deltaTime;
             yield return null;
         }
-        animator.SetBool(IS_ATTACKED, _attackReset);
+        animator.SetBool(IsAttackedHash, _attackReset);
         _isAttacking = false;
         navMesh.isStopped = false;
     }

@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 1751330912809482437}
   - component: {fileID: 3647420932246495678}
   - component: {fileID: 6992081120209022659}
+  - component: {fileID: 8587007819676921756}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -513,6 +514,8 @@ MonoBehaviour:
   rb: {fileID: 5312754946684565935}
   healthBar: {fileID: 7731040953528997538}
   activeWeapon: {fileID: 8690074299267149699}
+  health: {fileID: 6992081120209022659}
+  damage: 0
 --- !u!114 &6992081120209022659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,6 +529,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 100
+--- !u!114 &8587007819676921756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2244445103889660810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117b1bb27c7c46842b2ce82347f8171a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Blink
+  spriteRenderer: {fileID: 4205168836814778722}
+  blinkMaterial: {fileID: 2100000, guid: 817de635fb6c1f94aa1ccd075c738436, type: 2}
+  health: {fileID: 6992081120209022659}
 --- !u!1 &2259800740390143759
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,9 +578,9 @@ RectTransform:
   - {fileID: 5412003006399730534}
   m_Father: {fileID: 1296817247145953507}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 225, y: -608.3333}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8261471783687709556
@@ -739,7 +757,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7187831629384523069, guid: 682b6962d2380844db1c36ee67fc02c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -807,9 +825,9 @@ RectTransform:
   - {fileID: 1807077090491240572}
   m_Father: {fileID: 1296817247145953507}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 225, y: -175}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8666956474929294028
@@ -1037,7 +1055,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!1 &3589923132610728488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1876,9 +1894,9 @@ RectTransform:
   - {fileID: 3467709836020048754}
   m_Father: {fileID: 1296817247145953507}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 225, y: -391.66666}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2738891720644921898
@@ -2135,7 +2153,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
