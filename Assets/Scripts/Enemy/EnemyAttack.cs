@@ -6,8 +6,14 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] private PolygonCollider2D enemyAttackCollider;
     [SerializeField] private BoxCollider2D enemyCollider;
     [SerializeField] private EnemyController enemyController;
+    private PolygonCollider2D _defaultEnemyAttackColliderPosition;
 
     private float _damage;
+
+    private void Awake()
+    {
+        _defaultEnemyAttackColliderPosition = enemyAttackCollider;
+    }
 
     private void Start()
     {
@@ -36,5 +42,15 @@ public class EnemyAttack : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
             Player.Instance.PlayerHealth.TakeDamage(_damage / 2);
+    }
+
+    public void MoveEnemyAttackColliderToRight()
+    {
+        enemyAttackCollider.transform.localPosition += Vector3.right * 0.25f;
+    }
+
+    public void ResetEnemyAttackCollider()
+    {
+        enemyAttackCollider = _defaultEnemyAttackColliderPosition;
     }
 }

@@ -1,10 +1,12 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
     private float _currentHealth;
+    private float _dieTime = 0.15f;
 
     public event EventHandler onHealthChanges;
     public event EventHandler onTakeHit;
@@ -21,6 +23,8 @@ public class Health : MonoBehaviour
             _currentHealth = 0;
         onHealthChanges?.Invoke(this, EventArgs.Empty);
         onTakeHit?.Invoke(this, EventArgs.Empty);
+        if (_currentHealth == 0)
+            StartCoroutine(DieCoroutine());
     }
 
     public void TakeHealth(float value)
@@ -31,8 +35,6 @@ public class Health : MonoBehaviour
         onHealthChanges?.Invoke(this, EventArgs.Empty);
     }
 
-
-
     public float getNormalizedHealth()
     {
         return _currentHealth / maxHealth;
@@ -42,5 +44,11 @@ public class Health : MonoBehaviour
     {
         maxHealth = newMaxHealth;
         _currentHealth = maxHealth;
+    }
+
+    private IEnumerator DieCoroutine()
+    {
+        yield return new WaitForSeconds(_dieTime);
+        GameObject.Destroy(gameObject);
     }
 }

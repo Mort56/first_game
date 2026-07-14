@@ -19,13 +19,14 @@ GameObject:
   - component: {fileID: 1596808526148467305}
   - component: {fileID: 1500655930444396748}
   - component: {fileID: 1133889184519436164}
+  - component: {fileID: 6944162661253722021}
   m_Layer: 0
   m_Name: PoisonousSlime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4841033328893228291
 Transform:
   m_ObjectHideFlags: 0
@@ -314,3 +315,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 0
+--- !u!114 &6944162661253722021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3757364045514339658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117b1bb27c7c46842b2ce82347f8171a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Blink
+  spriteRenderer: {fileID: 8683546724076327747}
+  blinkMaterial: {fileID: 2100000, guid: 817de635fb6c1f94aa1ccd075c738436, type: 2}
+  health: {fileID: 1133889184519436164}

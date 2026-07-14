@@ -4,14 +4,17 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private EnemyController prefab;
-    [SerializeField] private float maxMapXSize;
-    [SerializeField] private float maxMapYSize;
+    [SerializeField] private GameObject gameBoard;
+    private float _maxMapXSize;
+    private float _maxMapYSize;
     private ObjectPool<EnemyController> _enemyPool;
 
 
     private void Awake()
     {
         _enemyPool = new ObjectPool<EnemyController>(prefab, 5, transform);
+        _maxMapXSize = gameBoard.transform.localScale.x;
+        _maxMapYSize = gameBoard.transform.localScale.y;
     }
 
     private void Start()
@@ -19,7 +22,7 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < 5; i++)
         {
             var enemy = _enemyPool.GetFreeElement();
-            enemy.transform.position = GetRandomSoawnPosition(maxMapXSize, maxMapYSize);
+            enemy.transform.position = GetRandomSoawnPosition(_maxMapXSize, _maxMapYSize);
             Debug.Log(enemy.transform.position);
         }
     }
