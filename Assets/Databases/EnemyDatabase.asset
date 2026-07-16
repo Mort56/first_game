@@ -27,15 +27,23 @@ MonoBehaviour:
     speed: 2.8
     attackDistanceByX: 1
     attackDistanceByY: 0.5
-    cooldawn: 1
+    cooldawn: 0.8
     enemyType: 0
   - id: 2
     maxHealth: 75
     damage: 10
-    speed: 3.5
+    speed: 4
     attackDistanceByX: 2
     attackDistanceByY: 1
-    cooldawn: 0.5
+    cooldawn: 1
+    enemyType: 0
+  - id: 3
+    maxHealth: 150
+    damage: 33
+    speed: 2
+    attackDistanceByX: 1.5
+    attackDistanceByY: 1
+    cooldawn: 1
     enemyType: 0
   currentItem:
     id: 2

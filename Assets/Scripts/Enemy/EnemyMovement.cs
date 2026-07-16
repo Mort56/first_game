@@ -36,8 +36,14 @@ public class EnemyMovement : MonoBehaviour
         else
             _state = EnemyState.chase;
         Movement();
-        if (Mathf.Abs(navMesh.velocity.x) > 0.1f)
-            spriteRenderer.flipX = navMesh.velocity.x < 0;
+        if (Player.Instance.transform.position.x > transform.position.x)
+            transform.rotation = Quaternion.identity;
+        else 
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        if (navMesh.velocity.x > 0.1f)
+            transform.rotation = Quaternion.identity;
+        else if (navMesh.velocity.x < -0.1f)
+            transform.rotation = Quaternion.Euler(0, 180, 0);
     }
 
     private void Movement()
@@ -45,7 +51,7 @@ public class EnemyMovement : MonoBehaviour
         switch (_state)
         {
             case EnemyState.chase:
-                navMesh.SetDestination(Player.Instance.transform.position);
+                navMesh.SetDestination(GetPositionForChase());
                 break;
             case EnemyState.attack:
                 if (!_isAttacking)
@@ -56,8 +62,8 @@ public class EnemyMovement : MonoBehaviour
 
     private bool IsCanAttack()
     {
-        if ((Mathf.Abs(Player.Instance.transform.position.x - this.transform.position.x) < _minimumXDistanceForAttack) && 
-            (Mathf.Abs(Player.Instance.transform.position.y - this.transform.position.y)) < _minimumYDistanceForAttack)
+        if ((Mathf.Abs(Player.Instance.transform.position.x - transform.position.x) < _minimumXDistanceForAttack) && 
+            (Mathf.Abs(Player.Instance.transform.position.y - transform.position.y)) < _minimumYDistanceForAttack)
             return true;
         else
             return false;
@@ -79,6 +85,17 @@ public class EnemyMovement : MonoBehaviour
         animator.SetBool(IsAttackedHash, _attackReset);
         _isAttacking = false;
         navMesh.isStopped = false;
+    }
+
+    private Vector3 GetPositionForChase()
+    {
+        Vector3 position = Player.Instance.transform.position;
+        if (transform.rotation.y == 0)
+            position.x -= enemyController.Data.AttackDistanceByX;
+        else
+            position.x += enemyController.Data.AttackDistanceByX;
+        position.y += enemyController.Data.AttackDistanceByY;
+        return position;
     }
 }
 

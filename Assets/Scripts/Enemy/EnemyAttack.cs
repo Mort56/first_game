@@ -6,17 +6,13 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] private PolygonCollider2D enemyAttackCollider;
     [SerializeField] private BoxCollider2D enemyCollider;
     [SerializeField] private EnemyController enemyController;
-    private PolygonCollider2D _defaultEnemyAttackColliderPosition;
+    private Vector2 _defaultPolygonOffset;
 
     private float _damage;
 
-    private void Awake()
-    {
-        _defaultEnemyAttackColliderPosition = enemyAttackCollider;
-    }
-
     private void Start()
     {
+        _defaultPolygonOffset = enemyAttackCollider.offset;
         enemyAttackCollider.enabled = false;
         enemyCollider.enabled = true;
         _damage = enemyController.Data.Damage;
@@ -30,6 +26,7 @@ public class EnemyAttack : MonoBehaviour
     public void DisableAttackCollider()
     {
         enemyAttackCollider.enabled = false;
+        ResetEnemyAttackCollider();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -46,11 +43,11 @@ public class EnemyAttack : MonoBehaviour
 
     public void MoveEnemyAttackColliderToRight()
     {
-        enemyAttackCollider.transform.localPosition += Vector3.right * 0.25f;
+        enemyAttackCollider.offset += Vector2.right * 0.25f;
     }
 
     public void ResetEnemyAttackCollider()
     {
-        enemyAttackCollider = _defaultEnemyAttackColliderPosition;
+        enemyAttackCollider.offset = _defaultPolygonOffset;
     }
 }
