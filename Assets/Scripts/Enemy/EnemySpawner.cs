@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour
     private float _maxMapXSize;
     private float _maxMapYSize;
     private ObjectPool<EnemyController> _enemyPool;
+    public ObjectPool<EnemyController> EnemyPool => _enemyPool;
 
 
     private void Awake()
@@ -19,20 +20,21 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
+        /*
         for (int i = 0; i < 5; i++)
         {
             var enemy = _enemyPool.GetFreeElement();
-            enemy.transform.position = GetRandomSoawnPosition(_maxMapXSize, _maxMapYSize);
-            Debug.Log(enemy.transform.position);
+            enemy.transform.position = GetRandomSpawnPosition();
         }
+        */
     }
 
-    private Vector3 GetRandomSoawnPosition(float maxXCoordinats, float maxYCoordinats)
+    public Vector3 GetRandomSpawnPosition()
     {
-        maxXCoordinats -= 5f;
-        var x = Random.Range(-1 * maxXCoordinats, maxXCoordinats); ;
-        maxYCoordinats -= 5f;
-        var y = Random.Range(-1 * maxYCoordinats, maxYCoordinats);
+        _maxMapXSize -= 5f;
+        var x = Random.Range(-1 * _maxMapXSize, _maxMapYSize); ;
+        _maxMapYSize -= 5f;
+        var y = Random.Range(-1 * _maxMapXSize, _maxMapYSize);
         return new Vector3(x, y, 0);
     }
 }

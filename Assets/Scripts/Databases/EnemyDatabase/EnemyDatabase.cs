@@ -36,6 +36,9 @@ public class Enemy
 
     [SerializeField] private EnemyModifier enemyType;
     public EnemyModifier EnemeyType => enemyType;
+    [SerializeField] private float spawnChance;
+    public float SpawnChance => spawnChance;
+
 }
 
 public enum EnemyModifier
