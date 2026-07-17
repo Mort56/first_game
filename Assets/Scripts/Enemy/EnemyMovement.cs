@@ -9,6 +9,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] EnemyController enemyController;
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer spriteRenderer;
+
+    private const float AttackRangeTolerance = 0.15f;
     private EnemyState _state;
     private float _speed;
     private float _minimumXDistanceForAttack;
@@ -35,11 +37,13 @@ public class EnemyMovement : MonoBehaviour
             _state = EnemyState.attack;
         else
             _state = EnemyState.chase;
+
         Movement();
-        if (Player.Instance.transform.position.x > transform.position.x)
-            transform.rotation = Quaternion.identity;
-        else 
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+        UpdateVisualFacing();
+    }
+
+    private void UpdateVisualFacing()
+    {
         if (navMesh.velocity.x > 0.1f)
             transform.rotation = Quaternion.identity;
         else if (navMesh.velocity.x < -0.1f)
@@ -62,11 +66,13 @@ public class EnemyMovement : MonoBehaviour
 
     private bool IsCanAttack()
     {
-        if ((Mathf.Abs(Player.Instance.transform.position.x - transform.position.x) < _minimumXDistanceForAttack) && 
-            (Mathf.Abs(Player.Instance.transform.position.y - transform.position.y)) < _minimumYDistanceForAttack)
-            return true;
-        else
-            return false;
+        float deltaX = Mathf.Abs(Player.Instance.transform.position.x - transform.position.x);
+        float deltaY = Mathf.Abs(Player.Instance.transform.position.y - transform.position.y);
+
+        bool xInRange = deltaX < Mathf.Abs(_minimumXDistanceForAttack) + AttackRangeTolerance;
+        bool yInRange = deltaY < Mathf.Abs(_minimumYDistanceForAttack) + AttackRangeTolerance;
+
+        return xInRange && yInRange;
     }
 
     private IEnumerator AttackCoroutine()
@@ -90,17 +96,25 @@ public class EnemyMovement : MonoBehaviour
     private Vector3 GetPositionForChase()
     {
         Vector3 position = Player.Instance.transform.position;
-        if (transform.rotation.y == 0)
+        bool playerIsToTheRight = Player.Instance.transform.position.x > transform.position.x;
+
+        if (playerIsToTheRight)
             position.x -= enemyController.Data.AttackDistanceByX;
         else
             position.x += enemyController.Data.AttackDistanceByX;
+
         position.y += enemyController.Data.AttackDistanceByY;
+
+        const float attackRangeSafetyMargin = 0.9f;
+        Vector3 offsetFromPlayer = position - Player.Instance.transform.position;
+        position = Player.Instance.transform.position + offsetFromPlayer * attackRangeSafetyMargin;
+
         return position;
     }
 }
 
 public enum EnemyState
 {
-    attack, 
+    attack,
     chase
 }

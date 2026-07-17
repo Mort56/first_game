@@ -164,7 +164,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   prefab: {fileID: 1272845508}
-  gameBoard: {fileID: 465547321}
 --- !u!114 &272558672 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1532643680583916168, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
@@ -35809,7 +35808,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   prefab: {fileID: 272558672}
-  gameBoard: {fileID: 465547321}
 --- !u!1 &708910521
 GameObject:
   m_ObjectHideFlags: 0
@@ -35826,7 +35824,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &708910522
 Transform:
   m_ObjectHideFlags: 0
@@ -35866,6 +35864,7 @@ MonoBehaviour:
   minEnemySpawn: 3
   maxEnemySpawn: 10
   spawnTime: 20
+  gameBoard: {fileID: 465547321}
 --- !u!1 &750123156
 GameObject:
   m_ObjectHideFlags: 0
@@ -36181,7 +36180,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   prefab: {fileID: 934161567}
-  gameBoard: {fileID: 465547321}
 --- !u!1001 &1272845507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36299,7 +36297,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   prefab: {fileID: 5649621787473016734}
-  gameBoard: {fileID: 465547321}
 --- !u!114 &1506006637 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2381495964019111745, guid: b0a98462b2e7203488e33bb5a4afdb88, type: 3}
@@ -36322,6 +36319,10 @@ PrefabInstance:
     - target: {fileID: 3757364045514339658, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
       propertyPath: m_Name
       value: PoisonousSlime
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757364045514339658, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4841033328893228291, guid: 5bb41cd81e376f0419a94ecb7c4dbc33, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36419,6 +36420,10 @@ PrefabInstance:
     - target: {fileID: 1901527111264881568, guid: dcecd513857ea5f4985374292658db1d, type: 3}
       propertyPath: m_Name
       value: Slime
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901527111264881568, guid: dcecd513857ea5f4985374292658db1d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
