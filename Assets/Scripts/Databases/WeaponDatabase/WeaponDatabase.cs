@@ -21,8 +21,8 @@ public class Weapon
     [SerializeField] private int level;
     public int Level => level;
 
-    [SerializeField] private float cooldawn;
-    public float Cooldawn => cooldawn;
+    [SerializeField] private float cooldown;
+    public float Cooldown => cooldown;
 
     [SerializeField] private float scale;
     public float Scale => scale;

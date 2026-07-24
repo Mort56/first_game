@@ -16,22 +16,22 @@ public class HealthBar : MonoBehaviour
 
     private void OnEnable()
     {
-        targetHealth.onHealthChanges += TargetHealth_onTakeHit;
+        targetHealth.OnHealthChanges += TargetHealth_onTakeHit;
     }
 
     private void Start()
     {
-        targetNormalizedHealth = targetHealth.getNormalizedHealth();
+        targetNormalizedHealth = targetHealth.GetNormalizedHealth();
     }
 
     private void OnDisable()
     {
-        targetHealth.onHealthChanges -= TargetHealth_onTakeHit;
+        targetHealth.OnHealthChanges -= TargetHealth_onTakeHit;
     }
 
     private void TargetHealth_onTakeHit(object sender, System.EventArgs e)
     {
-        targetNormalizedHealth = targetHealth.getNormalizedHealth();
+        targetNormalizedHealth = targetHealth.GetNormalizedHealth();
     }
 
     private void Update()

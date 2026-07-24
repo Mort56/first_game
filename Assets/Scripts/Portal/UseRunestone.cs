@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class StartLevel : MonoBehaviour, IInteractable
+public class UseRunestone : MonoBehaviour, IInteractable
 {
     static readonly int IsActivatedHash = Animator.StringToHash("isActivated"); 
     [SerializeField] private Animator levelAnimator;
@@ -12,10 +12,10 @@ public class StartLevel : MonoBehaviour, IInteractable
     {
         _isLevelActivated = !_isLevelActivated;
         levelAnimator.SetBool(IsActivatedHash, _isLevelActivated);
-        StartCoroutine(CoroutineAnimationStart());
+        StartCoroutine(StartAnimationCoroutine());
     }
 
-    private IEnumerator CoroutineAnimationStart()
+    private IEnumerator StartAnimationCoroutine()
     {
         levelAnimator.SetBool(IsActivatedHash, _isLevelActivated);
         while (_changeLevelAnimationTime > 0f)

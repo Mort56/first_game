@@ -5,24 +5,24 @@ public class GameSettings : MonoBehaviour
 {
     [SerializeField] private GameObject buttonZone;
 
-    public void onClickSettings()
+    public void OnClickSettings()
     {
         buttonZone.SetActive(true);
         Time.timeScale = 0f;
     }
 
-    public void onClickReturnToPlay()
+    public void OnClickReturnToPlay()
     {
         buttonZone.SetActive(false);
         Time.timeScale = 1.0f;
     }
 
-    public void onClickReturnToMainMenu()
+    public void OnClickReturnToMainMenu()
     {
         SceneManager.LoadScene("Menu");
     }
 
-    public void onClickQuite()
+    public void OnClickQuit()
     {
         Application.Quit();
     }

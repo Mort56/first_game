@@ -1,13 +1,12 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEditor;
 
 public class GenericDatabase<T> : Database where T : new()
 {
 
     [SerializeField] protected List<T> items;
     [SerializeField] private T currentItem;
-    [SerializeField] private int _currentId;
+    [SerializeField] private int currentId;
 
 
     public override void Create()
@@ -17,8 +16,8 @@ public class GenericDatabase<T> : Database where T : new()
 
         T item = new T();
         items.Add(item);
-        _currentId = items.Count - 1;
-        currentItem = items[_currentId];
+        currentId = items.Count - 1;
+        currentItem = items[currentId];
     }
 
     public override void Delete()
@@ -27,29 +26,29 @@ public class GenericDatabase<T> : Database where T : new()
             return;
 
         items.Remove(currentItem);
-        _currentId = 0;
+        currentId = 0;
 
         if (items.Count == 0)
             Create();
         else
-            currentItem = items[_currentId];
+            currentItem = items[currentId];
     }
 
     public override void Next()
     {
-        if (_currentId + 1 < items.Count)
+        if (currentId + 1 < items.Count)
         {
-            _currentId += 1;
-            currentItem = items[_currentId];
+            currentId += 1;
+            currentItem = items[currentId];
         }
     }
 
     public override void Prev()
     {
-        if (_currentId - 1 >= 0)
+        if (currentId - 1 >= 0)
         {
-            _currentId -= 1;
-            currentItem = items[_currentId];
+            currentId -= 1;
+            currentItem = items[currentId];
         }
     }
 }

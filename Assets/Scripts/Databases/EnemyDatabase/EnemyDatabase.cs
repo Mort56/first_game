@@ -31,18 +31,10 @@ public class Enemy
     [SerializeField] private float attackDistanceByY;
     public float AttackDistanceByY => attackDistanceByY;
 
-    [SerializeField] private float cooldawn;
-    public float Cooldawn => cooldawn;
+    [SerializeField] private float cooldown;
+    public float Cooldown => cooldown;
 
-    [SerializeField] private EnemyModifier enemyType;
-    public EnemyModifier EnemeyType => enemyType;
     [SerializeField] private float spawnChance;
     public float SpawnChance => spawnChance;
 
-}
-
-public enum EnemyModifier
-{
-    Normal, 
-    Elite
 }

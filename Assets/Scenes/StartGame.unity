@@ -17900,30 +17900,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5052584919895132260, guid: b0a98462b2e7203488e33bb5a4afdb88, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5951528519085725522, guid: b0a98462b2e7203488e33bb5a4afdb88, type: 3}
       propertyPath: BoundingShape2D
       value: 
       objectReference: {fileID: 50381268}
-    - target: {fileID: 6878270510268432945, guid: b0a98462b2e7203488e33bb5a4afdb88, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6882837090210362371, guid: b0a98462b2e7203488e33bb5a4afdb88, type: 3}
-      propertyPath: m_TagString
-      value: Weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 6899600484178552070, guid: b0a98462b2e7203488e33bb5a4afdb88, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.878685
-      objectReference: {fileID: 0}
-    - target: {fileID: 6899600484178552070, guid: b0a98462b2e7203488e33bb5a4afdb88, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.000001470248
-      objectReference: {fileID: 0}
     - target: {fileID: 8404963132264010018, guid: b0a98462b2e7203488e33bb5a4afdb88, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.32
@@ -17963,10 +17943,6 @@ PrefabInstance:
     - target: {fileID: 8404963132264010018, guid: b0a98462b2e7203488e33bb5a4afdb88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8997346908806868147, guid: b0a98462b2e7203488e33bb5a4afdb88, type: 3}
-      propertyPath: orthographic size
-      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

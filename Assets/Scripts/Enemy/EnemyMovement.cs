@@ -15,7 +15,7 @@ public class EnemyMovement : MonoBehaviour
     private float _speed;
     private float _minimumXDistanceForAttack;
     private float _minimumYDistanceForAttack;
-    private float _cooldawn;
+    private float _cooldown;
     private bool _attackReset = false;
     private bool _isAttacking = false;
 
@@ -27,7 +27,7 @@ public class EnemyMovement : MonoBehaviour
         _speed = enemyController.Data.Speed;
         _minimumXDistanceForAttack = enemyController.Data.AttackDistanceByX;
         _minimumYDistanceForAttack = enemyController.Data.AttackDistanceByY;
-        _cooldawn = enemyController.Data.Cooldawn;
+        _cooldown = enemyController.Data.Cooldown;
         navMesh.speed = _speed;
     }
 
@@ -77,7 +77,7 @@ public class EnemyMovement : MonoBehaviour
 
     private IEnumerator AttackCoroutine()
     {
-        var attackTime = _cooldawn;
+        var attackTime = _cooldown;
         _isAttacking = true;
         animator.SetBool(IsAttackedHash, IsCanAttack());
         while (attackTime > 0f)

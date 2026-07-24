@@ -2,7 +2,7 @@ using Unity.Loading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Button : MonoBehaviour
+public class MainMenuButton : MonoBehaviour
 {
     private string _startGameScene = "StartGame";
     public void onClickStart()
@@ -11,7 +11,7 @@ public class Button : MonoBehaviour
         Time.timeScale = 1.0f;
     }
 
-    public void onClickQuite()
+    public void onClickQuit()
     {
         Application.Quit();       
     }

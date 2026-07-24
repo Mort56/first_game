@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] private WeaponController activeWeapon;
     [SerializeField] private Health health;
     [SerializeField] private float damage;
-    private bool _isCanMove = false;
+    private bool _ñanMove = false;
     private Vector2 _lastDirection;
     private Vector2 _movement;
     private float _speed;
@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         _speed = defaultSpeed;
-        if (_isCanMove)
+        if (_ñanMove)
         {
             _movement.x = Input.GetAxisRaw("Horizontal");
             _movement.y = Input.GetAxisRaw("Vertical");
@@ -51,8 +51,8 @@ public class Player : MonoBehaviour
             activeWeapon.ChangeTransform(_lastDirection);
         }
 
-        if (Input.anyKeyDown && !_isCanMove)
-            StartCoroutine(CoroutineGetUpAnimation());
+        if (Input.anyKeyDown && !_ñanMove)
+            animator.SetTrigger(GetUpHash);
     }
 
     private void FixedUpdate()
@@ -68,10 +68,8 @@ public class Player : MonoBehaviour
             animator.SetFloat(SpeedHash, 0);
     }
 
-    private IEnumerator CoroutineGetUpAnimation()
+    public void EnableMovement()
     {
-        animator.SetTrigger(GetUpHash);
-        yield return new WaitForSeconds(1.5f);
-        _isCanMove = true;
+        _ñanMove = true;
     }
 }
