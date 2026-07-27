@@ -20,7 +20,7 @@ MonoBehaviour:
     attackDistanceByX: 1
     attackDistanceByY: 0
     cooldown: 0.7
-    spawnChance: 0
+    spawnChance: 20
   - id: 1
     maxHealth: 100
     damage: 15
@@ -28,7 +28,7 @@ MonoBehaviour:
     attackDistanceByX: 1
     attackDistanceByY: -0.3
     cooldown: 0.8
-    spawnChance: 0
+    spawnChance: 20
   - id: 2
     maxHealth: 75
     damage: 10
@@ -36,7 +36,7 @@ MonoBehaviour:
     attackDistanceByX: 2
     attackDistanceByY: 1
     cooldown: 0.8
-    spawnChance: 0
+    spawnChance: 20
   - id: 3
     maxHealth: 150
     damage: 33
@@ -44,7 +44,23 @@ MonoBehaviour:
     attackDistanceByX: 1.5
     attackDistanceByY: 1
     cooldown: 1.3
-    spawnChance: 0
+    spawnChance: 15
+  - id: 4
+    maxHealth: 50
+    damage: 25
+    speed: 2
+    attackDistanceByX: 5
+    attackDistanceByY: 5
+    cooldown: 1.3
+    spawnChance: 20
+  - id: 5
+    maxHealth: 200
+    damage: 50
+    speed: 1
+    attackDistanceByX: 5
+    attackDistanceByY: 5
+    cooldown: 5
+    spawnChance: 5
   currentItem:
     id: 1
     maxHealth: 100

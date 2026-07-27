@@ -35,14 +35,20 @@ public class EnemySpawnersController : MonoBehaviour
             case <= 20:
                 _currentEnemy = enemySpawnersController[0].EnemyPool.GetFreeElement();
                 break;
-            case <= 35:
+            case <= 40:
                 _currentEnemy = enemySpawnersController[1].EnemyPool.GetFreeElement();
                 break;
-            case <= 55:
+            case <= 60:
                 _currentEnemy = enemySpawnersController[2].EnemyPool.GetFreeElement();
                 break;
-            case <= 70:
+            case <= 75:
                 _currentEnemy = enemySpawnersController[3].EnemyPool.GetFreeElement();
+                break;
+            case <= 95:
+                _currentEnemy = enemySpawnersController[4].EnemyPool.GetFreeElement();
+                break;
+            case <= 100:
+                _currentEnemy = enemySpawnersController[5].EnemyPool.GetFreeElement();
                 break;
             default:
                 _currentEnemy = null;

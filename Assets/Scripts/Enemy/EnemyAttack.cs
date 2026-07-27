@@ -3,7 +3,7 @@ using UnityEngine.AI;
 
 public class EnemyAttack : MonoBehaviour
 {
-    [SerializeField] private PolygonCollider2D enemyAttackCollider;
+    [SerializeField] private Collider2D enemyAttackCollider;
     [SerializeField] private BoxCollider2D enemyCollider;
     [SerializeField] private EnemyController enemyController;
     private float _attackColliderFlipOffsetX = 0.25f;
