@@ -14,7 +14,7 @@ public class GameSettings : MonoBehaviour
     public void OnClickReturnToPlay()
     {
         buttonZone.SetActive(false);
-        Time.timeScale = 1.0f;
+        Time.timeScale = 1f;
     }
 
     public void OnClickReturnToMainMenu()

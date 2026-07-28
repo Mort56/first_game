@@ -1,16 +1,14 @@
 using UnityEngine;
 
-public class EnemyRangedAttack : MonoBehaviour
+public class BulletMovement : AbstractEnemyAttack
 {
-    [SerializeField] EnemyController enemyController;
     [SerializeField] private float speed = 0.25f;
     private Vector2 _direction;
-    private float _damage;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         GetTargetVector();
-        _damage = enemyController.Data.Damage;
     }
 
     private void GetTargetVector()
@@ -23,9 +21,10 @@ public class EnemyRangedAttack : MonoBehaviour
         transform.position += (Vector3)(_direction * speed * Time.fixedDeltaTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
-            Player.Instance.PlayerHealth.TakeDamage(_damage);
+        base.OnTriggerEnter2D(collision);
+        if (collision.CompareTag("Player") || collision.CompareTag("Wall"))
+            Destroy(gameObject);
     }
 }

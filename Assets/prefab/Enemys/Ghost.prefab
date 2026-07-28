@@ -203,9 +203,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb84cb472665e84c882dff3bd76ea18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
-  enemyAttackCollider: {fileID: 8539141756422359183}
-  enemyCollider: {fileID: 7565937235727567276}
   enemyController: {fileID: 2904011100994080313}
+  attackColliderFlipOffsetX: 0.25
+  enemyAttackCollider: {fileID: 8539141756422359183}
 --- !u!114 &2904011100994080313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,23 +289,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6666667
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6666667
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6666667
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.32
+      value: 2.29
       objectReference: {fileID: 0}
     - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.03
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -317,15 +317,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -343,13 +343,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: GhostBullet
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5750775425969739824, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8410750225743186600, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8539141756422359183}
+    - targetCorrespondingSourceObject: {fileID: 8410750225743186600, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7893182888346337709}
   m_SourcePrefab: {fileID: 100100000, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
 --- !u!1 &2198429201057413622 stripped
 GameObject:
@@ -386,12 +390,26 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.06447697, y: -0.015351325}
   m_Radius: 0.29383317
+--- !u!114 &7893182888346337709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2198429201057413622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd6807c2a2334146adf54aec552e7d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyRangedAttack
+  enemyController: {fileID: 2904011100994080313}
+  speed: 0.025
 --- !u!4 &8125816993574874972 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}

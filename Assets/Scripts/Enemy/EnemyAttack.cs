@@ -1,23 +1,19 @@
 using UnityEngine;
-using UnityEngine.AI;
 
-public class EnemyAttack : MonoBehaviour
+public class EnemyAttack : AbstractEnemyAttack
 {
+    [SerializeField] private float attackColliderFlipOffsetX = 0.25f;
     [SerializeField] private Collider2D enemyAttackCollider;
-    [SerializeField] private BoxCollider2D enemyCollider;
-    [SerializeField] private EnemyController enemyController;
-    private float _attackColliderFlipOffsetX = 0.25f;
     private Vector2 _defaultPolygonOffset;
-    private float _contactDamage;
-    private float _damage;
+    protected float _contactDamage;
 
-    private void Start()
+
+    protected override void Start()
     {
+        base.Start();
         _defaultPolygonOffset = enemyAttackCollider.offset;
         enemyAttackCollider.enabled = false;
-        enemyCollider.enabled = true;
-        _damage = enemyController.Data.Damage;
-        _contactDamage = _damage / 2f;
+        _contactDamage = damage / 2f;
     }
 
     public void EnableAttackCollider()
@@ -31,25 +27,19 @@ public class EnemyAttack : MonoBehaviour
         ResetEnemyAttackCollider();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void MoveEnemyAttackColliderToRight()
     {
-        if (collision.CompareTag("Player"))
-            Player.Instance.PlayerHealth.TakeDamage(_damage);
+        enemyAttackCollider.offset += Vector2.right * attackColliderFlipOffsetX;
+    }
+
+    public void ResetEnemyAttackCollider()
+    {
+        enemyAttackCollider.offset = _defaultPolygonOffset;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
             Player.Instance.PlayerHealth.TakeDamage(_contactDamage);
-    }
-
-    public void MoveEnemyAttackColliderToRight()
-    {
-        enemyAttackCollider.offset += Vector2.right * _attackColliderFlipOffsetX;
-    }
-
-    public void ResetEnemyAttackCollider()
-    {
-        enemyAttackCollider.offset = _defaultPolygonOffset;
     }
 }

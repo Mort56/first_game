@@ -5,10 +5,10 @@ using UnityEngine;
 public class EnemySpawnersController : MonoBehaviour
 {
     [SerializeField] private List<EnemySpawner> enemySpawnersController;
+    [SerializeField] private SpriteRenderer mapSpriteRenderer;
     [SerializeField] private int minEnemySpawn;
     [SerializeField] private int maxEnemySpawn;
     [SerializeField] private float spawnTime;
-    [SerializeField] private GameObject gameBoard;
 
     private EnemyController _currentEnemy;
     private bool _isEnemySpawn = false;
@@ -17,8 +17,8 @@ public class EnemySpawnersController : MonoBehaviour
 
     private void Awake()
     {
-        _maxMapXSize = gameBoard.transform.localScale.x;
-        _maxMapYSize = gameBoard.transform.localScale.y;
+        _maxMapXSize = mapSpriteRenderer.bounds.size.x;
+        _maxMapYSize = mapSpriteRenderer.bounds.size.y;
     }
 
     private void FixedUpdate()
