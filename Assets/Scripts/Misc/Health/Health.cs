@@ -49,6 +49,6 @@ public class Health : MonoBehaviour
     private IEnumerator DieCoroutine()
     {
         yield return new WaitForSeconds(_dieTime);
-        GameObject.Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

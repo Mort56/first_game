@@ -1,11 +1,10 @@
 using UnityEngine;
 
-public class EnemyAttack : AbstractEnemyAttack
+public class CloseRangeEnemyAttack : AbstractEnemyAttack
 {
     [SerializeField] private float attackColliderFlipOffsetX = 0.25f;
     [SerializeField] private Collider2D enemyAttackCollider;
     private Vector2 _defaultPolygonOffset;
-    protected float _contactDamage;
 
 
     protected override void Start()
@@ -13,7 +12,6 @@ public class EnemyAttack : AbstractEnemyAttack
         base.Start();
         _defaultPolygonOffset = enemyAttackCollider.offset;
         enemyAttackCollider.enabled = false;
-        _contactDamage = damage / 2f;
     }
 
     public void EnableAttackCollider()
@@ -35,11 +33,5 @@ public class EnemyAttack : AbstractEnemyAttack
     public void ResetEnemyAttackCollider()
     {
         enemyAttackCollider.offset = _defaultPolygonOffset;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-            Player.Instance.PlayerHealth.TakeDamage(_contactDamage);
     }
 }

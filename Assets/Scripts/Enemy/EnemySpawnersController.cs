@@ -11,7 +11,7 @@ public class EnemySpawnersController : MonoBehaviour
     [SerializeField] private float spawnTime;
 
     private EnemyController _currentEnemy;
-    private bool _isEnemySpawn = false;
+    private bool _isEnemySpawned = false;
     private float _maxMapXSize;
     private float _maxMapYSize;
 
@@ -23,7 +23,7 @@ public class EnemySpawnersController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!_isEnemySpawn)
+        if (!_isEnemySpawned)
             StartCoroutine(GetRandomEnemyCoroutine(minEnemySpawn, maxEnemySpawn, spawnTime));
     }
 
@@ -62,14 +62,14 @@ public class EnemySpawnersController : MonoBehaviour
     private IEnumerator GetRandomEnemyCoroutine(int minEnemyCount, int maxEnemyCount, float spawnTime)
     {
         var count = Random.Range(minEnemyCount, maxEnemyCount);
-        _isEnemySpawn = true;
-        while (count != 0)
+        _isEnemySpawned = true;
+        while (count > 0)
         {
             GetRandomEnemy();
             count -= 1;
         }
         yield return new WaitForSeconds(spawnTime);
-        _isEnemySpawn = false;
+        _isEnemySpawned = false;
     }
 
     private Vector3 GetRandomSpawnPosition()

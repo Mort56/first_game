@@ -8,6 +8,7 @@ TagManager:
   - Level 2
   - Enemy
   - Weapon
+  - Wall
   layers:
   - Default
   - TransparentFX

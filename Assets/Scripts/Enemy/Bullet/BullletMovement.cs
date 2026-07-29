@@ -1,19 +1,21 @@
+using TMPro;
 using UnityEngine;
 
 public class BulletMovement : AbstractEnemyAttack
 {
     [SerializeField] private float speed = 0.25f;
+    private float _damage;
     private Vector2 _direction;
 
     protected override void Start()
     {
         base.Start();
-        GetTargetVector();
     }
 
-    private void GetTargetVector()
+    public void GetTargetVector(Vector2 targetPosition, float damage)
     {
-        _direction = ((Vector2)Player.Instance.transform.position - (Vector2)transform.position).normalized;
+        _damage = damage;
+        _direction = (targetPosition - (Vector2)transform.position).normalized;
     }
 
     private void FixedUpdate()
@@ -25,6 +27,6 @@ public class BulletMovement : AbstractEnemyAttack
     {
         base.OnTriggerEnter2D(collision);
         if (collision.CompareTag("Player") || collision.CompareTag("Wall"))
-            Destroy(gameObject);
+            BulletPoolManager.Instance.ReturnBullet(this);
     }
 }
