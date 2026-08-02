@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 1500655930444396748}
   - component: {fileID: 1133889184519436164}
   - component: {fileID: 6944162661253722021}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PoisonousSlime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -286,9 +286,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb84cb472665e84c882dff3bd76ea18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
-  enemyAttackCollider: {fileID: 5378686934301107733}
-  enemyCollider: {fileID: 2268833950246927508}
   enemyController: {fileID: 1532643680583916168}
+  attackColliderFlipOffsetX: 0.25
+  enemyAttackCollider: {fileID: 5378686934301107733}
 --- !u!114 &1500655930444396748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,5 +328,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Blink
   spriteRenderer: {fileID: 8683546724076327747}
+  blinkTime: 0.15
   blinkMaterial: {fileID: 2100000, guid: 817de635fb6c1f94aa1ccd075c738436, type: 2}
   health: {fileID: 1133889184519436164}

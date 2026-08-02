@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: -5467369578650235649}
   - component: {fileID: -1449750392359424809}
   - component: {fileID: -6540579499671921060}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -255,9 +255,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb84cb472665e84c882dff3bd76ea18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
-  enemyAttackCollider: {fileID: 5377169371268527090}
-  enemyCollider: {fileID: 3816150348823283940}
   enemyController: {fileID: 8463430895062123127}
+  attackColliderFlipOffsetX: 0.25
+  enemyAttackCollider: {fileID: 5377169371268527090}
 --- !u!114 &8463430895062123127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,5 +328,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Blink
   spriteRenderer: {fileID: 5132026298235987766}
+  blinkTime: 0.15
   blinkMaterial: {fileID: 2100000, guid: 817de635fb6c1f94aa1ccd075c738436, type: 2}
   health: {fileID: -1449750392359424809}

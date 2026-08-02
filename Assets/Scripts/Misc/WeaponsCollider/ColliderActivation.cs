@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class WeaponColliderActivation : MonoBehaviour
 {
-    [SerializeField] private PolygonCollider2D polygonCollider;
+    [SerializeField] private Collider2D attackCollider;
 
     public void EnableCollider()
     {
-        polygonCollider.enabled = true;
+        attackCollider.enabled = true;
     }
 
     public void DisableCollider()
     {
-        polygonCollider.enabled = false;
+        attackCollider.enabled = false;
     }
 }

@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 526162301835204998}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.4071913, y: -0.000001470248, z: -6.666667}
+  m_LocalPosition: {x: 4.7733345, y: 0.70666665, z: -6.666667}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2019,8 +2019,8 @@ GameObject:
   - component: {fileID: 6164558702655705287}
   - component: {fileID: 3357639155574865382}
   - component: {fileID: 940852489278389524}
-  - component: {fileID: 4778666296619399756}
   - component: {fileID: 6878270510268432945}
+  - component: {fileID: 4778666296619399756}
   - component: {fileID: 1278612758705272273}
   m_Layer: 0
   m_Name: Sword
@@ -2125,19 +2125,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4778666296619399756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8743850370926520721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3de20f528449b64a93c8c633ffdd88d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::swordanimation
-  animator: {fileID: 940852489278389524}
 --- !u!60 &6878270510268432945
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2191,6 +2178,19 @@ PolygonCollider2D:
       - {x: 1.0649235, y: -0.02344352}
       - {x: 1.114533, y: 0.6205057}
   m_UseDelaunayMesh: 1
+--- !u!114 &4778666296619399756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8743850370926520721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3de20f528449b64a93c8c633ffdd88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::swordanimation
+  animator: {fileID: 940852489278389524}
 --- !u!114 &1278612758705272273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2203,7 +2203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa15787f546e44d4b8eea445043f510a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderActivation
-  polygonCollider: {fileID: 6878270510268432945}
+  attackCollider: {fileID: 6878270510268432945}
 --- !u!1001 &3686325852059864676
 PrefabInstance:
   m_ObjectHideFlags: 0

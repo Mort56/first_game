@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1187985376347911719}
   - component: {fileID: 2305227684447251181}
   - component: {fileID: 98718420106717668}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GhostBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

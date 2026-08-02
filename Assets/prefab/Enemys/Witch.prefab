@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2427359089812711883}
   - component: {fileID: 6597380024883319286}
   - component: {fileID: 2913574107484035658}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Witch
   m_TagString: Enemy
   m_Icon: {fileID: 0}

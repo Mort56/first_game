@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 6945025008447664519}
   - component: {fileID: 6884959690240736280}
   - component: {fileID: 6366295336466955109}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkeletonWithSword
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -258,9 +258,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb84cb472665e84c882dff3bd76ea18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
-  enemyAttackCollider: {fileID: 4407990323571415291}
-  enemyCollider: {fileID: 5883608362503688621}
   enemyController: {fileID: 1416243166257746344}
+  attackColliderFlipOffsetX: 0.25
+  enemyAttackCollider: {fileID: 4407990323571415291}
 --- !u!114 &1416243166257746344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,5 +331,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Blink
   spriteRenderer: {fileID: 3564297386921115102}
+  blinkTime: 0.15
   blinkMaterial: {fileID: 2100000, guid: 817de635fb6c1f94aa1ccd075c738436, type: 2}
   health: {fileID: 6884959690240736280}
