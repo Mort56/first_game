@@ -27,6 +27,6 @@ public class BulletMovement : AbstractEnemyAttack
     {
         base.OnTriggerEnter2D(collision);
         if (collision.CompareTag("Player") || collision.CompareTag("Wall"))
-            BulletPoolManager.Instance.ReturnBullet(this);
+            BulletSpawner.Instance.ReturnBullet(this);
     }
 }

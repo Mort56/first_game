@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class BulletSpawner : GenericItemPoolManager<BulletMovement>
+public class SpearSpawner : GenericItemPoolManager<Spear>
 {
-    public static BulletSpawner Instance;
+    public static SpearSpawner Instance;
 
     protected override void Awake()
     {
