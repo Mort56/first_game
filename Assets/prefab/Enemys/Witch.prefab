@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6357413678605427793}
   - component: {fileID: 7778298307129459998}
   - component: {fileID: 7627832631549574875}
+  - component: {fileID: 42354682026149917}
   - component: {fileID: 3649204530234422992}
   - component: {fileID: 3187103568721702261}
   - component: {fileID: 6492657080986015826}
@@ -20,13 +21,14 @@ GameObject:
   - component: {fileID: 5346399645163079572}
   - component: {fileID: 3339049550815009892}
   - component: {fileID: 4645874439662247244}
-  m_Layer: 0
+  - component: {fileID: 6169222926426202893}
+  m_Layer: 8
   m_Name: Witch
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7348093299481165873
 Transform:
   m_ObjectHideFlags: 0
@@ -145,6 +147,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &42354682026149917
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315601796135546984}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &3649204530234422992
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -218,10 +247,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05cb863e83fb06b42ac409bd048bbcf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  enemySpawnFade: {fileID: 6169222926426202893}
   navMesh: {fileID: 7778298307129459998}
   enemyController: {fileID: 3187103568721702261}
-  animator: {fileID: 7627832631549574875}
   spriteRenderer: {fileID: 6357413678605427793}
+  animator: {fileID: 7627832631549574875}
 --- !u!114 &5383753375983817165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,3 +325,16 @@ MonoBehaviour:
   blinkTime: 0.15
   blinkMaterial: {fileID: 2100000, guid: 817de635fb6c1f94aa1ccd075c738436, type: 2}
   health: {fileID: 3339049550815009892}
+--- !u!114 &6169222926426202893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315601796135546984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b12b26874f7ea4990efc531e7355c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnFade
+  spriteRenderer: {fileID: 6357413678605427793}

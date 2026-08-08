@@ -1,4 +1,3 @@
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public abstract class AbstractEnemyAttack : MonoBehaviour
@@ -22,7 +21,7 @@ public abstract class AbstractEnemyAttack : MonoBehaviour
             Player.Instance.PlayerHealth.TakeDamage(damage);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
             Player.Instance.PlayerHealth.TakeDamage(contactDamage);

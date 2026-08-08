@@ -1,32 +1,33 @@
-using TMPro;
 using UnityEngine;
 
-public class BulletMovement : AbstractEnemyAttack
+public class BulletMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 0.25f;
-    private float _damage;
-    private Vector2 _direction;
+    protected static readonly int DestroyBulletHash = Animator.StringToHash("destroyBullet");
+    [SerializeField] protected Animator animator;
+    [SerializeField] protected float speed = 10f;
+    protected Vector2 _direction;
 
-    protected override void Start()
+    public virtual void GetTargetVector(Vector2 targetPosition)
     {
-        base.Start();
-    }
-
-    public void GetTargetVector(Vector2 targetPosition, float damage)
-    {
-        _damage = damage;
         _direction = (targetPosition - (Vector2)transform.position).normalized;
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         transform.position += (Vector3)(_direction * speed * Time.fixedDeltaTime);
     }
 
-    protected override void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        base.OnTriggerEnter2D(collision);
-        if (collision.CompareTag("Player") || collision.CompareTag("Wall"))
-            BulletSpawner.Instance.ReturnBullet(this);
+        if (collision.CompareTag("Player") || collision.CompareTag("Wall") || collision.CompareTag("Weapon"))
+        {
+            _direction = Vector2.zero;
+            animator.SetTrigger(DestroyBulletHash);
+        }
+    }
+
+    public virtual void ReturnBulletToPool()
+    {
+        BulletSpawner.Instance.ReturnItem(this);
     }
 }

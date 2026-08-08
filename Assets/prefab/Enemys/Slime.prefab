@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5132026298235987766}
   - component: {fileID: 3953175785749481798}
   - component: {fileID: 636741492727310862}
+  - component: {fileID: 5893271473746905478}
   - component: {fileID: 3816150348823283940}
   - component: {fileID: 5377169371268527090}
   - component: {fileID: 7516209751075108926}
@@ -20,6 +21,7 @@ GameObject:
   - component: {fileID: -5467369578650235649}
   - component: {fileID: -1449750392359424809}
   - component: {fileID: -6540579499671921060}
+  - component: {fileID: 1004161573594204128}
   m_Layer: 8
   m_Name: Slime
   m_TagString: Enemy
@@ -145,6 +147,33 @@ NavMeshAgent:
   m_BaseOffset: 0.3
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!50 &5893271473746905478
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901527111264881568}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &3816150348823283940
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -285,10 +314,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05cb863e83fb06b42ac409bd048bbcf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  enemySpawnFade: {fileID: 1004161573594204128}
   navMesh: {fileID: 636741492727310862}
   enemyController: {fileID: 8463430895062123127}
-  animator: {fileID: 3953175785749481798}
   spriteRenderer: {fileID: 5132026298235987766}
+  animator: {fileID: 3953175785749481798}
 --- !u!114 &-5467369578650235649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,3 +361,16 @@ MonoBehaviour:
   blinkTime: 0.15
   blinkMaterial: {fileID: 2100000, guid: 817de635fb6c1f94aa1ccd075c738436, type: 2}
   health: {fileID: -1449750392359424809}
+--- !u!114 &1004161573594204128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901527111264881568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b12b26874f7ea4990efc531e7355c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnFade
+  spriteRenderer: {fileID: 5132026298235987766}

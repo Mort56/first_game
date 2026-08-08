@@ -12,12 +12,12 @@ public class GenericItemPoolManager<T> : MonoBehaviour where T : MonoBehaviour
         _itemPool = new ObjectPool<T>(itemPrefab, itemCount, container);
     }
 
-    public T GetBullet()
+    public T GetItem()
     {
         return _itemPool.GetFreeElement();
     }
 
-    public void ReturnBullet(T item)
+    public void ReturnItem(T item)
     {
         _itemPool.Release(item);
     }

@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
     private float _speed;
 
     public float Damage => damage;
-    public Vector2 LastDirection => _lastDirection;
     public Health PlayerHealth => health;
     public static Player Instance;
 

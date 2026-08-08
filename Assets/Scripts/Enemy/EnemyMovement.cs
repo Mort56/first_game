@@ -5,10 +5,11 @@ using UnityEngine.AI;
 public class EnemyMovement : MonoBehaviour
 {
     private static readonly int IsAttackedHash = Animator.StringToHash("isAttacked");
+    [SerializeField] private EnemySpawnFade enemySpawnFade;
     [SerializeField] private NavMeshAgent navMesh;
     [SerializeField] EnemyController enemyController;
-    [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] Animator animator;
 
     private const float AttackRangeTolerance = 0.15f;
     private EnemyState _state;
@@ -52,15 +53,18 @@ public class EnemyMovement : MonoBehaviour
 
     private void Movement()
     {
-        switch (_state)
+        if (enemySpawnFade.IsSpawned)
         {
-            case EnemyState.chase:
-                navMesh.SetDestination(GetPositionForChase());
-                break;
-            case EnemyState.attack:
-                if (!_isAttacking)
-                    StartCoroutine(AttackCoroutine());
-                break;
+            switch (_state)
+            {
+                case EnemyState.chase:
+                    navMesh.SetDestination(GetPositionForChase());
+                    break;
+                case EnemyState.attack:
+                    if (!_isAttacking)
+                        StartCoroutine(AttackCoroutine());
+                    break;
+            }
         }
     }
 

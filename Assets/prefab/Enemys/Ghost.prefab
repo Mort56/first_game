@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7780410778181692494}
   - component: {fileID: 3372831152215067250}
   - component: {fileID: 5616202422404773760}
+  - component: {fileID: 6597635600814213611}
   - component: {fileID: 7565937235727567276}
   - component: {fileID: 2904011100994080313}
   - component: {fileID: 8538981666412711227}
@@ -19,13 +20,14 @@ GameObject:
   - component: {fileID: 3608699938415791509}
   - component: {fileID: 3645306709035529758}
   - component: {fileID: 8996199099667735812}
+  - component: {fileID: 5134653712953379426}
   m_Layer: 8
   m_Name: Ghost
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4205974668692098653
 Transform:
   m_ObjectHideFlags: 0
@@ -38,7 +40,8 @@ Transform:
   m_LocalPosition: {x: -9.34063, y: -0.75181, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 2716337124313098087}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7780410778181692494
@@ -144,6 +147,33 @@ NavMeshAgent:
   m_BaseOffset: 0.3
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 0
+--- !u!50 &6597635600814213611
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6836189273130148450}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &7565937235727567276
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -217,10 +247,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05cb863e83fb06b42ac409bd048bbcf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  enemySpawnFade: {fileID: 5134653712953379426}
   navMesh: {fileID: 5616202422404773760}
   enemyController: {fileID: 2904011100994080313}
-  animator: {fileID: 3372831152215067250}
   spriteRenderer: {fileID: 7780410778181692494}
+  animator: {fileID: 3372831152215067250}
 --- !u!114 &5395965992861071320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,4 +306,108 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa4cee7f0229324795067fa14fce17d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LongRangeEnemyAttack
+  enemyController: {fileID: 2904011100994080313}
+--- !u!114 &5134653712953379426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6836189273130148450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b12b26874f7ea4990efc531e7355c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnFade
+  spriteRenderer: {fileID: 7780410778181692494}
+--- !u!1001 &4561146728490040165
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4205974668692098653}
+    m_Modifications:
+    - target: {fileID: 98718420106717668, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+      propertyPath: enemyController
+      value: 
+      objectReference: {fileID: 2904011100994080313}
+    - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.649772
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.12228815
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410750225743186600, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+      propertyPath: m_Name
+      value: GhostBullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410750225743186600, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8410750225743186600, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7634271832163465430}
+  m_SourcePrefab: {fileID: 100100000, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+--- !u!4 &2716337124313098087 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1945041505101421570, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+  m_PrefabInstance: {fileID: 4561146728490040165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5473155630223126989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8410750225743186600, guid: fad729ac1f1c9bc47be7134c3b547ea7, type: 3}
+  m_PrefabInstance: {fileID: 4561146728490040165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7634271832163465430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5473155630223126989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c624acd9bc87554e85a3a1f4ee835b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BulletGetDamage
   enemyController: {fileID: 2904011100994080313}
