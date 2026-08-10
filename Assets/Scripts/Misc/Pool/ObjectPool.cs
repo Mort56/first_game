@@ -59,8 +59,7 @@ public class ObjectPool<T> where T : MonoBehaviour
             element.gameObject.SetActive(true);
             return element;
         }
-
-        if (AutoExpand)
+        else if (AutoExpand)
             return CreateObject(true);
 
         return null;

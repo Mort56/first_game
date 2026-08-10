@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpearSpawner : GenericItemPoolManager<Spear>
+public class SpearSpawner : GenericItemPoolManager<SpearFindTargetsEnemy>
 {
     public static SpearSpawner Instance;
 

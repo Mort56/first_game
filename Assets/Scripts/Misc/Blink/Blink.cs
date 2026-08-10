@@ -4,13 +4,15 @@ using UnityEngine;
 public class Blink : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private float blinkTime = 0.15f;
+    [SerializeField] private float blinkDuration = 0.15f;
     [SerializeField] private Material blinkMaterial;
     [SerializeField] private Health health;
     private Material _defaultMaterial;
+    private WaitForSeconds _waitBlinkDuration;
 
     private void Awake()
     {
+        _waitBlinkDuration = new WaitForSeconds(blinkDuration);
         _defaultMaterial = spriteRenderer.material;
     }
 
@@ -32,7 +34,7 @@ public class Blink : MonoBehaviour
     private IEnumerator ObjectBlinkAnimationCoroutine()
     {
         spriteRenderer.material = blinkMaterial;
-        yield return new WaitForSeconds(blinkTime);
+        yield return _waitBlinkDuration;
         spriteRenderer.material = _defaultMaterial;
     }
 }

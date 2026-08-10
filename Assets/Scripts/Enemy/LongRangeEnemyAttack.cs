@@ -8,6 +8,6 @@ public class LongRangeEnemyAttack : AbstractEnemyAttack
         if (_currentBullet == null)
             return;
         _currentBullet.transform.position = transform.position;
-        _currentBullet.GetTargetVector(Player.Instance.transform.position);
+        _currentBullet.GetTargetVector(Player.Instance.transform.position, damage);
     }
 }

@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 526162301835204998}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.7733345, y: 0.70666665, z: -6.666667}
+  m_LocalPosition: {x: 0, y: 0, z: -6.666667}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -515,7 +515,7 @@ MonoBehaviour:
   healthBar: {fileID: 7731040953528997538}
   activeWeapon: {fileID: 8690074299267149699}
   health: {fileID: 6992081120209022659}
-  damage: 0
+  damage: 25
 --- !u!114 &6992081120209022659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Blink
   spriteRenderer: {fileID: 4205168836814778722}
-  blinkTime: 0.15
+  blinkDuration: 0.15
   blinkMaterial: {fileID: 2100000, guid: 817de635fb6c1f94aa1ccd075c738436, type: 2}
   health: {fileID: 6992081120209022659}
 --- !u!1 &2259800740390143759
@@ -677,7 +677,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!1 &2561270071583562859
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +690,7 @@ GameObject:
   - component: {fileID: 4205168836814778722}
   - component: {fileID: 1389531856229752305}
   - component: {fileID: 3390342008395835823}
+  - component: {fileID: 1465178664550636361}
   m_Layer: 0
   m_Name: PlayerAnimation
   m_TagString: Untagged
@@ -794,6 +795,19 @@ Animator:
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &3390342008395835823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2561270071583562859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7173182a5e95b489cec19020556dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerVisualEvents
+  player: {fileID: 3647420932246495678}
+--- !u!114 &1465178664550636361
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -938,7 +952,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!1 &3485006975805677161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,6 +1628,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6164558702655705287}
+  - {fileID: 2358552284633320003}
   m_Father: {fileID: 8404963132264010018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8690074299267149699
@@ -2007,7 +2022,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!1 &8743850370926520721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2024,7 +2039,7 @@ GameObject:
   - component: {fileID: 1278612758705272273}
   m_Layer: 0
   m_Name: Sword
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2204,6 +2219,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderActivation
   attackCollider: {fileID: 6878270510268432945}
+--- !u!1 &9039707403149472183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2358552284633320003}
+  - component: {fileID: 7186429525361830554}
+  m_Layer: 0
+  m_Name: SpearController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2358552284633320003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9039707403149472183}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5052584919895132260}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7186429525361830554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9039707403149472183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccdf71cf933222c4489ad8600bc18b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpearController
+  spearFindTargetsEnemy: {fileID: 0}
+  spearMovement: {fileID: 0}
 --- !u!1001 &3686325852059864676
 PrefabInstance:
   m_ObjectHideFlags: 0

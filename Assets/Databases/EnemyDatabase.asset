@@ -30,9 +30,9 @@ MonoBehaviour:
     cooldown: 0.8
     spawnChance: 20
   - id: 2
-    maxHealth: 75
+    maxHealth: 25
     damage: 10
-    speed: 4
+    speed: 6
     attackDistanceByX: 2
     attackDistanceByY: 1
     cooldown: 0.8

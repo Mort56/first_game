@@ -8,8 +8,9 @@ public class EnemySpawnersController : MonoBehaviour
     [SerializeField] private SpriteRenderer mapSpriteRenderer;
     [SerializeField] private int minEnemySpawn;
     [SerializeField] private int maxEnemySpawn;
-    [SerializeField] private float spawnTime;
+    [SerializeField] private float spawnDuration;
 
+    private WaitForSeconds _waitSpawnDuration;
     private EnemyController _currentEnemy;
     private bool _isEnemySpawned = false;
     private float _maxMapXSize;
@@ -17,6 +18,7 @@ public class EnemySpawnersController : MonoBehaviour
 
     private void Awake()
     {
+        _waitSpawnDuration = new WaitForSeconds(spawnDuration);
         _maxMapXSize = mapSpriteRenderer.bounds.size.x;
         _maxMapYSize = mapSpriteRenderer.bounds.size.y;
     }
@@ -24,7 +26,7 @@ public class EnemySpawnersController : MonoBehaviour
     private void FixedUpdate()
     {
         if (!_isEnemySpawned)
-            StartCoroutine(GetRandomEnemyCoroutine(minEnemySpawn, maxEnemySpawn, spawnTime));
+            StartCoroutine(GetRandomEnemyCoroutine(minEnemySpawn, maxEnemySpawn, spawnDuration));
     }
 
     private void GetRandomEnemy()
@@ -33,22 +35,22 @@ public class EnemySpawnersController : MonoBehaviour
         switch (number)
         {
             case <= 20:
-                _currentEnemy = enemySpawnersController[0].EnemyPool.GetFreeElement();
+                _currentEnemy = enemySpawnersController[0].ItemPool.GetFreeElement();
                 break;
             case <= 40:
-                _currentEnemy = enemySpawnersController[1].EnemyPool.GetFreeElement();
+                _currentEnemy = enemySpawnersController[1].ItemPool.GetFreeElement();
                 break;
             case <= 60:
-                _currentEnemy = enemySpawnersController[2].EnemyPool.GetFreeElement();
+                _currentEnemy = enemySpawnersController[2].ItemPool.GetFreeElement();
                 break;
             case <= 75:
-                _currentEnemy = enemySpawnersController[3].EnemyPool.GetFreeElement();
+                _currentEnemy = enemySpawnersController[3].ItemPool.GetFreeElement();
                 break;
             case <= 95:
-                _currentEnemy = enemySpawnersController[4].EnemyPool.GetFreeElement();
+                _currentEnemy = enemySpawnersController[4].ItemPool.GetFreeElement();
                 break;
             case <= 100:
-                _currentEnemy = enemySpawnersController[5].EnemyPool.GetFreeElement();
+                _currentEnemy = enemySpawnersController[5].ItemPool.GetFreeElement();
                 break;
             default:
                 _currentEnemy = null;
@@ -68,7 +70,7 @@ public class EnemySpawnersController : MonoBehaviour
             GetRandomEnemy();
             count -= 1;
         }
-        yield return new WaitForSeconds(spawnTime);
+        yield return _waitSpawnDuration;
         _isEnemySpawned = false;
     }
 

@@ -1,32 +1,24 @@
 using UnityEngine;
 
-public class BulletMovement : MonoBehaviour
+public class BulletMovement : ProjectileMovement
 {
-    protected static readonly int DestroyBulletHash = Animator.StringToHash("destroyBullet");
-    [SerializeField] protected Animator animator;
-    [SerializeField] protected float speed = 10f;
-    protected Vector2 _direction;
+    private static readonly int DestroyBulletHash = Animator.StringToHash("destroyBullet");
+    [SerializeField] private Animator animator;
 
-    public virtual void GetTargetVector(Vector2 targetPosition)
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        _direction = (targetPosition - (Vector2)transform.position).normalized;
-    }
-
-    protected virtual void FixedUpdate()
-    {
-        transform.position += (Vector3)(_direction * speed * Time.fixedDeltaTime);
-    }
-
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") || collision.CompareTag("Wall") || collision.CompareTag("Weapon"))
+        base.OnTriggerEnter2D(collision);
+        if (collision.CompareTag("Player"))
         {
             _direction = Vector2.zero;
-            animator.SetTrigger(DestroyBulletHash);
+            Player.Instance.PlayerHealth.TakeDamage(_damage);
+            _isNeedDestroy = true;
         }
+        if (_isNeedDestroy)
+            animator.SetTrigger(DestroyBulletHash);
     }
 
-    public virtual void ReturnBulletToPool()
+    public void ReturnBulletToPool()
     {
         BulletSpawner.Instance.ReturnItem(this);
     }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2207561454398467355}
   - component: {fileID: 1187985376347911719}
   - component: {fileID: 2305227684447251181}
-  - component: {fileID: 98718420106717668}
+  - component: {fileID: 4510870442710349852}
   m_Layer: 8
   m_Name: GhostBullet
   m_TagString: Untagged
@@ -180,7 +180,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.06447697, y: -0.015351325}
   m_Radius: 0.29383317
---- !u!114 &98718420106717668
+--- !u!114 &4510870442710349852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,7 +191,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8dd6807c2a2334146adf54aec552e7d9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyRangedAttack
-  enemyController: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::BulletMovement
   animator: {fileID: 1187985376347911719}
   speed: 10

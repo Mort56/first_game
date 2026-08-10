@@ -5,16 +5,17 @@ public abstract class AbstractFindByRadius : MonoBehaviour
     [SerializeField] protected float radius;
     [SerializeField] protected float hpChangeValue;
     [SerializeField] protected LayerMask targetLayer;
+    [SerializeField] protected int targetsNumber;
+    protected int numberOfTargetsFound;
+    protected Collider2D[] objects;
 
-    public virtual void EffectToTargetInRadius()
+    protected void Start()
     {
-        Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, radius, targetLayer);
+        objects = new Collider2D[targetsNumber];
+    }
 
-        foreach (var obj in objects)
-        {
-            Health objectHealth = obj.GetComponent<Health>();
-            if (objectHealth != null)
-                objectHealth.TakeDamage(hpChangeValue);
-        }
+    protected virtual void EffectToTargetInRadius()
+    {
+        numberOfTargetsFound = Physics2D.OverlapCircleNonAlloc(transform.position, radius, objects, targetLayer);
     }
 }

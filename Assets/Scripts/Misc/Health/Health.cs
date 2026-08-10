@@ -6,13 +6,15 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
     private float _currentHealth;
-    private float _dieTime = 0.15f;
+    private float _deathDuration = 0.15f;
+    private WaitForSeconds _waitDeathDuration;
 
     public event EventHandler OnHealthChanges;
     public event EventHandler OnTakeHit;
 
     private void Awake()
     {
+        _waitDeathDuration = new WaitForSeconds(_deathDuration);
         _currentHealth = maxHealth;
     }
     
@@ -48,7 +50,7 @@ public class Health : MonoBehaviour
 
     private IEnumerator DieCoroutine()
     {
-        yield return new WaitForSeconds(_dieTime);
+        yield return _waitDeathDuration;
         gameObject.SetActive(false);
     }
 }
