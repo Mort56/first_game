@@ -18,12 +18,12 @@ public class Blink : MonoBehaviour
 
     private void OnEnable()
     {
-        health.OnTakeHit += Health_onTakeHit;
+        health.onHealthDown += Health_onTakeHit;
     }
 
     private void OnDisable()
     {
-        health.OnTakeHit -= Health_onTakeHit;
+        health.onHealthDown -= Health_onTakeHit;
     }
 
     private void Health_onTakeHit(object sender, System.EventArgs e)

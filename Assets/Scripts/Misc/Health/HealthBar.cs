@@ -15,7 +15,8 @@ public class HealthBar : MonoBehaviour
 
     private void OnEnable()
     {
-        targetHealth.OnHealthChanges += TargetHealth_onTakeHit;
+        targetHealth.onHealthUp += TargetHealth_onHealthChanged;
+        targetHealth.onHealthDown += TargetHealth_onHealthChanged;
     }
 
     private void Start()
@@ -25,10 +26,11 @@ public class HealthBar : MonoBehaviour
 
     private void OnDisable()
     {
-        targetHealth.OnHealthChanges -= TargetHealth_onTakeHit;
+        targetHealth.onHealthUp -= TargetHealth_onHealthChanged;
+        targetHealth.onHealthDown -= TargetHealth_onHealthChanged;
     }
 
-    private void TargetHealth_onTakeHit(object sender, System.EventArgs e)
+    private void TargetHealth_onHealthChanged(object sender, System.EventArgs e)
     {
         targetNormalizedHealth = targetHealth.GetNormalizedHealth();
     }

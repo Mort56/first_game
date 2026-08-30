@@ -14,12 +14,14 @@ public class Player : MonoBehaviour
     [SerializeField] private WeaponController activeWeapon;
     [SerializeField] private Health health;
     [SerializeField] private float damage;
+    [SerializeField] private float luck;
     private bool _ñanMove = false;
     private Vector2 _lastDirection;
     private Vector2 _movement;
     private float _speed;
 
     public float Damage => damage;
+    public float Luck => luck;
     public Health PlayerHealth => health;
     public static Player Instance;
 

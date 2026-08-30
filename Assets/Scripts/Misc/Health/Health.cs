@@ -9,8 +9,8 @@ public class Health : MonoBehaviour
     private float _deathDuration = 0.15f;
     private WaitForSeconds _waitDeathDuration;
 
-    public event EventHandler OnHealthChanges;
-    public event EventHandler OnTakeHit;
+    public event EventHandler onHealthUp;
+    public event EventHandler onHealthDown;
 
     private void Awake()
     {
@@ -23,8 +23,7 @@ public class Health : MonoBehaviour
         _currentHealth -= damage;
         if (_currentHealth < 0)
             _currentHealth = 0;
-        OnHealthChanges?.Invoke(this, EventArgs.Empty);
-        OnTakeHit?.Invoke(this, EventArgs.Empty);
+        onHealthDown?.Invoke(this, EventArgs.Empty);
         if (_currentHealth <= 0)
             StartCoroutine(DieCoroutine());
     }
@@ -34,7 +33,7 @@ public class Health : MonoBehaviour
         _currentHealth += value;
         if (_currentHealth > maxHealth)
             _currentHealth = maxHealth;
-        OnHealthChanges?.Invoke(this, EventArgs.Empty);
+        onHealthUp?.Invoke(this, EventArgs.Empty);
     }
 
     public float GetNormalizedHealth()

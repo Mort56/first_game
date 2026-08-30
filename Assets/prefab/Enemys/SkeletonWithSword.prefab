@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 6884959690240736280}
   - component: {fileID: 6366295336466955109}
   - component: {fileID: 7358983554584919272}
+  - component: {fileID: 5290837726426855445}
   m_Layer: 8
   m_Name: SkeletonWithSword
   m_TagString: Enemy
@@ -41,7 +42,8 @@ Transform:
   m_LocalPosition: {x: -12.75778, y: -1.27501, z: 0}
   m_LocalScale: {x: 2.3, y: 2.3, z: 2.3}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 37033069538822287}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3564297386921115102
@@ -159,7 +161,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 20
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -361,7 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Blink
   spriteRenderer: {fileID: 3564297386921115102}
-  blinkTime: 0.15
+  blinkDuration: 0.15
   blinkMaterial: {fileID: 2100000, guid: 817de635fb6c1f94aa1ccd075c738436, type: 2}
   health: {fileID: 6884959690240736280}
 --- !u!114 &7358983554584919272
@@ -377,3 +379,79 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnFade
   spriteRenderer: {fileID: 3564297386921115102}
+--- !u!114 &5290837726426855445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5891738852739306987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5766d431a93a1b74a811f7c01e193786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthVFX
+  particleSystem: {fileID: 0}
+  objectHealth: {fileID: 0}
+--- !u!1001 &824631600306593057
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5004806930497272548}
+    m_Modifications:
+    - target: {fileID: 860820242674996654, guid: 353f54bd602d08647bd59e65998ba9d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 860820242674996654, guid: 353f54bd602d08647bd59e65998ba9d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 860820242674996654, guid: 353f54bd602d08647bd59e65998ba9d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 860820242674996654, guid: 353f54bd602d08647bd59e65998ba9d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 860820242674996654, guid: 353f54bd602d08647bd59e65998ba9d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 860820242674996654, guid: 353f54bd602d08647bd59e65998ba9d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 860820242674996654, guid: 353f54bd602d08647bd59e65998ba9d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 860820242674996654, guid: 353f54bd602d08647bd59e65998ba9d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 860820242674996654, guid: 353f54bd602d08647bd59e65998ba9d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 860820242674996654, guid: 353f54bd602d08647bd59e65998ba9d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3637016875179573740, guid: 353f54bd602d08647bd59e65998ba9d0, type: 3}
+      propertyPath: m_Name
+      value: HealthEffect
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 353f54bd602d08647bd59e65998ba9d0, type: 3}
+--- !u!4 &37033069538822287 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 860820242674996654, guid: 353f54bd602d08647bd59e65998ba9d0, type: 3}
+  m_PrefabInstance: {fileID: 824631600306593057}
+  m_PrefabAsset: {fileID: 0}
