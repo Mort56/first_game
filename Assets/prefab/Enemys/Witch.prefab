@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 4645874439662247244}
   - component: {fileID: 6169222926426202893}
   - component: {fileID: 8008757051487772921}
+  - component: {fileID: 3781000737732418703}
   m_Layer: 8
   m_Name: Witch
   m_TagString: Enemy
@@ -354,6 +355,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HealthVFX
   particleSystem: {fileID: 8706121274953610988}
   objectHealth: {fileID: 3339049550815009892}
+--- !u!114 &3781000737732418703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315601796135546984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 844c02d960bf1d749860cd3e7b0fc633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ExperienceDropper
+  enemyController: {fileID: 3187103568721702261}
+  health: {fileID: 3339049550815009892}
 --- !u!1001 &3203230806967623339
 PrefabInstance:
   m_ObjectHideFlags: 0

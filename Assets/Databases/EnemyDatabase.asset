@@ -21,6 +21,7 @@ MonoBehaviour:
     attackDistanceByY: 0
     cooldown: 0.7
     spawnChance: 20
+    orbCount: 2
   - id: 1
     maxHealth: 100
     damage: 15
@@ -29,6 +30,7 @@ MonoBehaviour:
     attackDistanceByY: -0.3
     cooldown: 0.8
     spawnChance: 20
+    orbCount: 2
   - id: 2
     maxHealth: 25
     damage: 10
@@ -37,6 +39,7 @@ MonoBehaviour:
     attackDistanceByY: 1
     cooldown: 0.8
     spawnChance: 20
+    orbCount: 1
   - id: 3
     maxHealth: 150
     damage: 33
@@ -45,6 +48,7 @@ MonoBehaviour:
     attackDistanceByY: 1
     cooldown: 1.3
     spawnChance: 15
+    orbCount: 3
   - id: 4
     maxHealth: 50
     damage: 25
@@ -53,6 +57,7 @@ MonoBehaviour:
     attackDistanceByY: 5
     cooldown: 1.3
     spawnChance: 20
+    orbCount: 2
   - id: 5
     maxHealth: 200
     damage: 20
@@ -61,6 +66,7 @@ MonoBehaviour:
     attackDistanceByY: 5
     cooldown: 5
     spawnChance: 5
+    orbCount: 5
   currentItem:
     id: 1
     maxHealth: 100
@@ -70,4 +76,5 @@ MonoBehaviour:
     attackDistanceByY: -0.3
     cooldown: 0.8
     spawnChance: 0
+    orbCount: 0
   currentId: 1

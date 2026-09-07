@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class EnemyHealAllies : AbstractFindByRadius
 {
     public void ChangeTargetHealth()
@@ -7,7 +5,8 @@ public class EnemyHealAllies : AbstractFindByRadius
         base.EffectToTargetInRadius();
         for (var i = 0; i <  numberOfTargetsFound; i++)
         {
-            objects[i].GetComponent<Health>().TakeHealth(hpChangeValue);
+            if (objects[i].TryGetComponent<Health>(out var enemy))
+                enemy.TakeHealth(hpChangeValue);
         }
     }
 }

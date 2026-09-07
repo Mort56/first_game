@@ -23,13 +23,14 @@ GameObject:
   - component: {fileID: 6366295336466955109}
   - component: {fileID: 7358983554584919272}
   - component: {fileID: 5290837726426855445}
+  - component: {fileID: 1114169811383842694}
   m_Layer: 8
   m_Name: SkeletonWithSword
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5004806930497272548
 Transform:
   m_ObjectHideFlags: 0
@@ -391,8 +392,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5766d431a93a1b74a811f7c01e193786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthVFX
-  particleSystem: {fileID: 0}
-  objectHealth: {fileID: 0}
+  particleSystem: {fileID: 6906230776416056678}
+  objectHealth: {fileID: 6884959690240736280}
+--- !u!114 &1114169811383842694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5891738852739306987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 844c02d960bf1d749860cd3e7b0fc633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ExperienceDropper
+  enemyController: {fileID: 1416243166257746344}
+  health: {fileID: 6884959690240736280}
 --- !u!1001 &824631600306593057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -445,6 +460,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthEffect
       objectReference: {fileID: 0}
+    - target: {fileID: 4171339227749390042, guid: 353f54bd602d08647bd59e65998ba9d0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -453,5 +472,10 @@ PrefabInstance:
 --- !u!4 &37033069538822287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 860820242674996654, guid: 353f54bd602d08647bd59e65998ba9d0, type: 3}
+  m_PrefabInstance: {fileID: 824631600306593057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6906230776416056678 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6099688496122832967, guid: 353f54bd602d08647bd59e65998ba9d0, type: 3}
   m_PrefabInstance: {fileID: 824631600306593057}
   m_PrefabAsset: {fileID: 0}

@@ -23,13 +23,14 @@ GameObject:
   - component: {fileID: 6944162661253722021}
   - component: {fileID: 5271198685548308465}
   - component: {fileID: 1712756604571239399}
+  - component: {fileID: 7217314707830074593}
   m_Layer: 8
   m_Name: PoisonousSlime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4841033328893228291
 Transform:
   m_ObjectHideFlags: 0
@@ -390,6 +391,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HealthVFX
   particleSystem: {fileID: 416491179264846813}
   objectHealth: {fileID: 1133889184519436164}
+--- !u!114 &7217314707830074593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3757364045514339658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 844c02d960bf1d749860cd3e7b0fc633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ExperienceDropper
+  enemyController: {fileID: 1532643680583916168}
+  health: {fileID: 1133889184519436164}
 --- !u!1001 &5864213226217669530
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public abstract class AbstractFindByRadius : MonoBehaviour
     protected int numberOfTargetsFound;
     protected Collider2D[] objects;
 
-    protected void Start()
+    protected virtual void Awake()
     {
         objects = new Collider2D[targetsNumber];
     }

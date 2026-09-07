@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
 
     public event EventHandler onHealthUp;
     public event EventHandler onHealthDown;
+    public event EventHandler onDeath;
 
     private void Awake()
     {
@@ -25,7 +26,10 @@ public class Health : MonoBehaviour
             _currentHealth = 0;
         onHealthDown?.Invoke(this, EventArgs.Empty);
         if (_currentHealth <= 0)
+        {
+            onDeath?.Invoke(this, EventArgs.Empty);
             StartCoroutine(DieCoroutine());
+        }
     }
 
     public void TakeHealth(float value)

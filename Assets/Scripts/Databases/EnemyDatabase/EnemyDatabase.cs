@@ -36,5 +36,9 @@ public class Enemy
 
     [SerializeField] private float spawnChance;
     public float SpawnChance => spawnChance;
+    
+    [SerializeField] private int orbCount;
+    public int OrbCount => orbCount;
+
 
 }
