@@ -1,12 +1,15 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
-public class ExperienceOrb : ProjectileMovement
+public class ExperienceOrb : AbstractProjectileMovement
 {
     [SerializeField] private float timeBetweenChaseChecks = 0.5f;
     [SerializeField] private float orbSpawnTime = 2f;
     [SerializeField] private float maxChaseDistance = 5f;
     [SerializeField] private float durationToSpeedPickUp = 2f;
+
+    public static event EventHandler onTakeOrb;
 
     private WaitForSeconds _waitTimeBetweenChaseChecks;
     private WaitForSeconds _waitOrbSpawnTime;
@@ -39,7 +42,7 @@ public class ExperienceOrb : ProjectileMovement
 
     private Vector2 GetRandomDir()
     {
-        return new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+        return new Vector2(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)).normalized;
     }
 
     private IEnumerator OrbSpawnCoroutine()
@@ -112,6 +115,9 @@ public class ExperienceOrb : ProjectileMovement
             _isNeedDestroy = false;
 
         if (_isNeedDestroy)
+        {
             ExperienceOrbSpawner.Instance.ReturnItem(this);
+            onTakeOrb?.Invoke(this, EventArgs.Empty);
+        }
     }
 }

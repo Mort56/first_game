@@ -1,8 +1,9 @@
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
-public class GetCardById : MonoBehaviour
+public class UpgradeCardVisual : MonoBehaviour
 {
     [SerializeField] private UpgradeCardDatabase upgradeCardDatabase;
     [SerializeField] private List<Text> cardsDescriptions;
@@ -14,40 +15,58 @@ public class GetCardById : MonoBehaviour
     private Rarity _currentCardRarity;
     private float _playerLuck;
     private List<float> _valuesModifier;
-    private List<UpgradeCard> _cards;
 
     private void Awake()
     {
-        _cards = new List<UpgradeCard>();
         _valuesModifier = new List<float>();
+    }
+
+    private void OnEnable()
+    {
+        ExperienceManager.onBarFilledUp += ExperienceManager_onBarFilledUp;
+    }
+
+    private void ExperienceManager_onBarFilledUp(object sender, System.EventArgs e)
+    {
+        SetRarityBordersForAllCards();
+        SetAllCardVisual();
+    }
+
+    private void SetAllCardVisual()
+    {
+        var card1 = GetCardAndSetCardVisual(Random.Range(100, 109), 0);
+        var card2 = GetCardAndSetCardVisual(Random.Range(100, 109), 1);
+        var card3 = GetCardAndSetCardVisual(Random.Range(100, 109), 2);
+        if (card1 == card2 || card1 == card3 || card2 == card3)
+            SetAllCardVisual();
+        else
+            _valuesModifier.Clear();
     }
 
     private void Start()
     {
         _playerLuck = Player.Instance.Luck;
-        SetRarityBordersForAllCards();
-        SetCardVisualById(103, 0);
-        SetCardVisualById(104, 1);
-        SetCardVisualById(105, 2);
     }
 
-    private void GetCard(int cardId)
+    private UpgradeCard GetCard(int cardId)
     {
-        _cards.Add(upgradeCardDatabase.GetCardById(cardId));
+        return (upgradeCardDatabase.Items.FirstOrDefault(card => card.Id == cardId));
     }
 
-    private void SetTextAndIconById(int cardCount)
-    {
-        float _value = _cards[cardCount].Value * _valuesModifier[cardCount];
-        Debug.Log(_cards[cardCount].Value + " и множитель " + _valuesModifier[cardCount]);
-        cardsDescriptions[cardCount].text = _cards[cardCount].Description + $"\n {_cards[cardCount].Component} + {_value}";
-        cardsIcons[cardCount].sprite = _cards[cardCount].Icon;
-    }   
 
-    private void SetCardVisualById(int id, int cardCount)
+    private UpgradeCard GetCardAndSetCardVisual(int cardId, int cardCount)
     {
-        GetCard(id);
-        SetTextAndIconById(cardCount);
+        var currentCard = GetCard(cardId);
+        SetCardVisual(currentCard, cardCount);
+        return currentCard;
+    }
+
+    private void SetCardVisual(UpgradeCard currentCard, int cardCount)
+    {
+        float _value = currentCard.Value * _valuesModifier[cardCount];
+        cardsDescriptions[cardCount].text = currentCard.Description +
+            $"\n {currentCard.Component} + {_value}";
+        cardsIcons[cardCount].sprite = currentCard.Icon;
     }
 
     private Sprite GetRarityForOneCard()

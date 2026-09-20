@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class ProjectileMovement : MonoBehaviour
+public abstract class AbstractProjectileMovement : MonoBehaviour
 {
     [SerializeField] protected float speed = 10f;
     protected bool _isNeedDestroy = false;

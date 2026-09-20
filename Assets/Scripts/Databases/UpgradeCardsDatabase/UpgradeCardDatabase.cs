@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "new UpgradeCard Database", menuName = "Database/UpgradeCard")]
 public class UpgradeCardDatabase : GenericDatabase<UpgradeCard>
@@ -8,6 +9,7 @@ public class UpgradeCardDatabase : GenericDatabase<UpgradeCard>
     {
         return items.FirstOrDefault(card => card.Id == id);
     }
+    public List<UpgradeCard> Items => items;
 }
 
 [System.Serializable]

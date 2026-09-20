@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BulletMovement : ProjectileMovement
+public class BulletMovement : AbstractProjectileMovement
 {
     private static readonly int DestroyBulletHash = Animator.StringToHash("destroyBullet");
     [SerializeField] private Animator animator;

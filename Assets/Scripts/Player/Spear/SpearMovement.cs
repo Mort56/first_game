@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpearMovement : ProjectileMovement
+public class SpearMovement : AbstractProjectileMovement
 {
     [SerializeField] private SpearController spearController;
     public Vector2 Direction => _direction;

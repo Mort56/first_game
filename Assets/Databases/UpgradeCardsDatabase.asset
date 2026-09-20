@@ -56,7 +56,7 @@ MonoBehaviour:
   - id: 108
     icon: {fileID: 6978476122321447959, guid: ad8a5fe0461f18e44a3f4aa5dce0b33c, type: 3}
     description: "Luck \u2014 a chance for a legendary card (or a chance for an epic
-      card /3)"
+      card * 3)"
     component: 8
     value: 1
   currentItem:
